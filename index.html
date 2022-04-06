@@ -36,7 +36,7 @@
 
     <div class="card">
         <h5 class="card-header">Определение. Неравенство треугольника.</h5>
-        <h5 class="card-header">$$|a+b|<=|a|+|b|$$</h5>
+        <h5 class="card-header">$$|a+b|\le|a|+|b|$$</h5>
         <div class="card-body">
 	        <p class="card-text">Док-во:</p>
 	        <p class="card-text">Рассмотрим два случая:</p>
@@ -49,29 +49,31 @@
 	    	<p class="card-text">Док-во:</p>
 	        <p class="card-text">Докажим для случая $n=3$.</p>
 	        <p class="card-text">Дважды применим неравенство треугольника: $|a+b+с|=|(a+b)+с|\le|a+b|+|с|\le|a|+|b|+|с|$.</p>
+	        <p class="card-text">ч.т.д.</p>
 	        <p class="card-text">Аналогично доказывается и для всех n.</p>
 	    </div>
     </div>
-
+    <p></p>
     <div class="card">
-        <h5 class="card-header">				    	
-        Definition. A partition of a set.		
-	</h5>
+        <h5 class="card-header">Определение. Неравенство Коши-Шварца (Коши—Буняковского—Шварца).</h5>
+        <h5 class="card-header">$$(a_1*b_1+a_2*b_2+...+a_n*b_n)^2\le(a_1^2+a_2^2+...+a_n^2)*(b_1^2+b_2^2+...+b_n^2)$$</h5>
         <div class="card-body">
-            <p class="card-text">A partition of set S is a set of disjoint nonempty subsets of S, whose union is S</p>
-        </div>
+	        <p class="card-text">Док-во:</p>
+	        <p class="card-text">Примем следующие обозначения:</p>
+	        <p class="card-text">$$A=(a_1^2+a_2^2+...+a_n^2)$$,</p>
+	        <p class="card-text">$$B=(a_1*b_1+a_2*b_2+...+a_n*b_n)^2$$,</p>
+	        <p class="card-text">$$C=(b_1^2+b_2^2+...+b_n^2)$$.</p>
+	        <p class="card-text">Тогда неравенство можно записать как $A*C\geB^2$. Для док-ва заметим, что для любых действительных $t\in\mathbb{R}$ верно неравенство</p>
+	        <p class="card-text">$$0\le(a_1+t*b_1)^2+(a_2+t*b_2)^2+...+(a_n+t*b_n)^2$$,</p>
+	        <p class="card-text">т.к. правая часть представляет собой сумму квадратов. После расскрытия скобок и перестановки слагаемых получим:</p>
+	        <p class="card-text">$$0\le(a_1^2+a_2^2+...+a_n^2)+(2*a_1*b_1*t+2*a_2*b_2*t+...+2*a_n*b_n*t)+(t^2*b_1^2+t^2*b_2^2+...+t^2*b_n^2)=A+2*B*t+C*t^2$$</p>
+	        <p class="card-text">для всех $t$. Здесь $C\ge0$, но можно рассмотреть случай когда $C\gt0$, т.к. при $C=0$ получаем $B^2=A*C=0$.</p> 
+	        <p class="card-text">Примем $t=-\frac{B,C}$ (минимум квадратного уравнения $A+2*B*t+C*t^2$) и получим</p>
+	        <p class="card-text">$$0\leA-\frac{2*B^2,C}+\frac{B^2,C^2}=\frac{AC-B^2,C}$$.</p>
+	        <p class="card-text">Отсюда получаем $0\leAC-B^2\RightarrowA*C\geB^2$.</p>
+	        <p class="card-text">ч.т.д.</p>
+	    </div>
     </div>
-	    
-    <div class="card">
-        <h5 class="card-header">				    	
-        Definition 1.2. The quotient of the set with respect to the equivalence relation ∼.		
-	</h5>
-        <div class="card-body">
-            <p class="card-text">The quotient of the set S with respect to the equivalence relation ∼ is the set</p>
-	        <p class="card-text">$$S/∼ := \mathcal{P}_∼$$</p>
-	        <p class="card-text">of equivalence classes of elements of S with respect to ∼.</p>
-        </div>
-    </div>	    
 	    
     <!-- END CONTAINER -->
     </div>
