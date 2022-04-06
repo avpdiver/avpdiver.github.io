@@ -56,7 +56,7 @@
     <p></p>
     <div class="card">
         <h5 class="card-header">Определение. Неравенство Коши-Шварца (Коши—Буняковского—Шварца).</h5>
-        <h5 class="card-header">$$(a_1*b_1+a_2*b_2+...+a_n*b_n)^2\le(a_1^2+a_2^2+...+a_n^2)*(b_1^2+b_2^2+...+b_n^2)$$</h5>
+        <h5 class="card-header">$$(a_1b_1+a_2b_2+...+a_nb_n)^2\le(a_1^2+a_2^2+...+a_n^2)*(b_1^2+b_2^2+...+b_n^2)$$</h5>
         <div class="card-body">
 	        <p class="card-text">Док-во:</p>
 	        <p class="card-text">Примем следующие обозначения:</p>
@@ -68,8 +68,8 @@
 	        <p class="card-text">т.к. правая часть представляет собой сумму квадратов. После расскрытия скобок и перестановки слагаемых получим:</p>
 	        <p class="card-text">$$0\le(a_1^2+a_2^2+...+a_n^2)+(2*a_1*b_1*t+2*a_2*b_2*t+...+2*a_n*b_n*t)+(t^2*b_1^2+t^2*b_2^2+...+t^2*b_n^2)=A+2*B*t+C*t^2$$</p>
 	        <p class="card-text">для всех $t$. Здесь $C\ge0$, но можно рассмотреть случай когда $C\gt0$, т.к. при $C=0$ получаем $B^2=A*C=0$.</p> 
-	        <p class="card-text">Примем $t=-\frac{B,C}$ (минимум квадратного уравнения $A+2*B*t+C*t^2$) и получим</p>
-	        <p class="card-text">$$0\leA-\frac{2*B^2,C}+\frac{B^2,C^2}=\frac{AC-B^2,C}$$.</p>
+	        <p class="card-text">Примем $t=-\frac{B}{C}$ (минимум квадратного уравнения $A+2*B*t+C*t^2$) и получим</p>
+	        <p class="card-text">$$0\leA-\frac{2*B^2}{C}+\frac{B^2}{C^2}=\frac{AC-B^2}{C}$$.</p>
 	        <p class="card-text">Отсюда получаем $0\leAC-B^2\RightarrowA*C\geB^2$.</p>
 	        <p class="card-text">ч.т.д.</p>
 	    </div>
