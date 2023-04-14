@@ -1,81 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Avpdiver blog</title>
+	<title>Pyro blog</title>
 
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
-	      rel="stylesheet" 
-	      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
-	      crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
-            crossorigin="anonymous">            	
-    </script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script type="text/javascript" id="MathJax-script" async 
-	        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-	</script>
-	<script>
-        MathJax = {
-			tex: {
-				inlineMath: [['$', '$'], ['\\(', '\\)']]
-			}
-		};
-    </script>
 </head>
 <body>
     <div class="container-sm">
-    <!-- BEGIN CONTAINER -->
-	    
-    <h2>Глава 1. Введение</h2>
-    <h3>§1.1 Числовой континуум</h2>
-
-    <div class="card">
-        <h5 class="card-header">Неравенство треугольника.</h5>
-        <h5 class="card-header">$$|a+b|\le|a|+|b|$$</h5>
-        <div class="card-body">
-	        <p class="card-text">Док-во:</p>
-	        <p class="card-text">Рассмотрим два случая:</p>
-	        <p class="card-text">1) Если $a+b\ge0$, то имеем $a+b\le|a|+|b|$, что сразу следует из суммы неравенств $a\le|a|$ и $b\le|b|$.</p>
-	        <p class="card-text">2) Если $a+b\lt0$, то имеем $-(a+b)\le|a|+|b|$, что, снова, сразу следует из суммы неравенств $-a\le|a|$ и $-b\le|b|$.</p>
-	        <p class="card-text">ч.т.д.</p>
-	    </div>
-	    <h5 class="card-header">Следствие: $|a_1+a_2+...+a_n|\le|a_1|+|a_2|+...+|a_n|$.</h5>
-	    <div class="card-body">
-	    	<p class="card-text">Док-во:</p>
-	        <p class="card-text">Докажим для случая $n=3$.</p>
-	        <p class="card-text">Дважды применим неравенство треугольника: $|a+b+с|=|(a+b)+с|\le|a+b|+|с|\le|a|+|b|+|с|$.</p>
-	        <p class="card-text">ч.т.д.</p>
-	        <p class="card-text">Аналогично доказывается и для всех n.</p>
-	    </div>
-    </div>
-    <p></p>
-    <div class="card">
-        <h5 class="card-header">Неравенство Коши-Шварца (Коши—Буняковского—Шварца).</h5>
-        <h5 class="card-header">$$(a_1b_1+a_2b_2+...+a_nb_n)^2\le(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)$$</h5>
-        <div class="card-body">
-	        <p class="card-text">Док-во:</p>
-	        <p class="card-text">Примем следующие обозначения:</p>
-	        <p class="card-text">$$A=(a_1^2+a_2^2+...+a_n^2),$$</p>
-	        <p class="card-text">$$B=(a_1b_1+a_2b_2+...+a_nb_n)^2,$$</p>
-	        <p class="card-text">$$C=(b_1^2+b_2^2+...+b_n^2).$$</p>
-	        <p class="card-text">Тогда неравенство можно записать как $AC \ge B^2$. Для док-ва заметим, что для любых действительных $t\in\mathbb{R}$ верно неравенство</p>
-	        <p class="card-text">$$0\le(a_1+tb_1)^2+(a_2+tb_2)^2+...+(a_n+tb_n)^2,$$</p>
-	        <p class="card-text">т.к. правая часть представляет собой сумму квадратов. После расскрытия скобок и перестановки слагаемых получим:</p>
-	        <p class="card-text">$$0\le(a_1^2+a_2^2+...+a_n^2)+(2a_1b_1t+2a_2b_2t+...+2a_nb_nt)+(t^2b_1^2+t^2b_2^2+...+t^2b_n^2)=A+2Bt+Ct^2$$</p>
-	        <p class="card-text">для всех $t$. Здесь $C\ge0$, но можно рассмотреть случай когда $C\gt0$, т.к. при $C=0$ получаем $B^2=AC=0$.</p> 
-	        <p class="card-text">Примем $t=-\frac{B}{C}$ (минимум квадратного уравнения $A+2Bt+Ct^2$) и получим</p>
-	        <p class="card-text">$$0\le A-\frac{2B^2}{C}+\frac{B^2}{C^2}=\frac{AC-B^2}{C}$$.</p>
-	        <p class="card-text">Отсюда получаем $0\le AC-B^2\Rightarrow AC\ge B^2$.</p>
-	        <p class="card-text">ч.т.д.</p>
-	    </div>
-    </div>
-	    
-    <!-- END CONTAINER -->
+		<a href="zorich.html">Зорич В.А. Математический анализ</a>
     </div>
 </body>
 </html>
