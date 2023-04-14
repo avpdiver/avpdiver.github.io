@@ -139,19 +139,19 @@
             что $|x_n|<{M}$ при любом $n\in{N}$.
         </p>
         <p>
-            <a name="g3p1_th5">Теорема 1.</a>
+            <a name="g3p1_th1">Теорема 1.</a>
             <ul class="list-unstyled letters">
-                <li style="content: 'a';"><i>Финально постоянная последовательность сходится.</i></li>
+                <li><i>Финально постоянная последовательность сходится.</i></li>
                 <li><i>Любая окрестность предела последовательности содержит все члены последовательности,
                     за исключением конечного их числа.</i></li>
                 <li><i>Последовательность не может иметь двух различных пределов.</i></li>
                 <li><i>Сходящаяся последовательность ограничена.</i></li>                    
             </ul>
-            <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_g3p1_th5" aria-expanded="false" aria-controls="collapse_g3p1_th5">
+            <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_g3p1_th1" aria-expanded="false" aria-controls="collapse_g3p1_th1">
                 Доказательство
             </button>
             
-            <div class="collapse" id="collapse_g3p1_th5">                        
+            <div class="collapse" id="collapse_g3p1_th1">                        
             $\blacktriangleleft$ 
             <p>
                 a) Если $x_n=A$ при $n>N$, то для любой окрестности $V(A)$ точки $A$
@@ -178,6 +178,48 @@
             </div>
         </p>
 
+        <h6 style="font-weight: bold;">b. Предельный переход и арифметические операции</h6> 
+        <p>
+            <a name="g3p1_def6">Определение 6.</a> 
+            Если $\{x_n\},\{y_n\}$ - две числовые последовательнсоти, то их <i>суммой</i>,
+            <i>произведением</i> и <i>частным</i> (в соответствии с общим определнием суммы, произведения и частного функций)
+            называются соответственно последовательности
+            $$\{(x_n+y_n)\},\quad\{(x_n\cdot{y_n})\},\quad\left\{\left(\frac{x_n}{y_n}\right)\right\}$$
+        </p>
+        <p>
+            Частное, разумеется, определено лишь при $y_n\neq0,n\in\mathbb{N}$.
+        </p>
+
+        <p>
+            <a name="g3p1_th2">Теорема 2.</a>
+            <i>
+            Пусть $\{x_n\},\{y_n\}$ - числовые последовательности.
+            Если $\lim_{n\to\infty}{x_n}=A,\ \lim_{n\to\infty}{y_n}=B$, то
+            <ul class="list-unstyled letters">
+                <li>$\lim_{n\to\infty}(x_n+y_n)=A+B$</li>
+                <li>$\lim_{n\to\infty}(x_n\cdot{y_n})=A\cdot{B}$</li>
+                <li>$\lim_{n\to\infty}\frac{x_n}{y_n}=\frac{A}{B}$, если $y_n\neq{0}\ (n=1,2,...)$ и $B\neq{0}$</li>
+            </ul>
+            </i>
+            <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_g3p1_th2" aria-expanded="false" aria-controls="collapse_g3p1_th2">
+                Доказательство
+            </button>
+            
+            <div class="" id="collapse_g3p1_th2">                        
+            $\blacktriangleleft$
+            <p>
+                В качестве упражнения воспользуемся уже известными нам (<a href="#g2p2s4">см. гл. II, §2, п.4</a>)
+                оценками абсолютных погрешностей, возникающих при арифметических операциях с приближенными
+                значениями величин.
+            </p>
+            <p>
+                Положим $|A-x_n|=\Delta(x_n),\ |B-y_n|=\Delta(y_n)$. Тогда для случая a) имеем
+                $$|(A+B)-(x_n+y_n)|\leq\Delta(x_n)+\Delta(y_n).$$
+            </p>
+            $\blacktriangleright$
+            </div>
+        </p>
+                
         <!-- END CONTAINER -->
     </div>
     </div>
@@ -192,7 +234,13 @@
             <li><a href="#g3p1_def3">&#8212; расходящаяся</a></li>
             <li><a href="#g3p1_def3">&#8212; сходящаяся</a></li>
             <li><a href="#g3p1_def4">&#8212; финально постоянная</a></li>
-            <li><a href="#g3p1_def2">Предел последовательности</a></li>            
+            <li><a href="#g3p1_def2">Предел последовательности</a></li>
+            <li><a href="#g3p1_def6">Произведение</a></li>
+            <li><a href="#g3p1_def6">&#8212; последовательности</a></li> 
+            <li><a href="#g3p1_def6">Сумма</a></li>
+            <li><a href="#g3p1_def6">&#8212; последовательности</a></li>
+            <li><a href="#g3p1_def6">Частное</a></li>
+            <li><a href="#g3p1_def6">&#8212; последовательности</a></li>
         </ul>
         <!-- END CONTAINER -->
     </div>
