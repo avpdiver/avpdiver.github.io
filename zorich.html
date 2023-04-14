@@ -21,6 +21,37 @@
             }
         };
     </script>
+
+    <style>
+        a:link,
+        a:visited,
+        a:hover,
+        a:active
+        {
+            text-decoration: none;
+        }
+        ul.letters li:nth-child(1)::before {
+            content: "a) ";
+        }
+        ul.letters li:nth-child(2)::before {
+            content: "b) ";
+        }
+        ul.letters li:nth-child(3)::before {
+            content: "c) ";
+        }
+        ul.letters li:nth-child(4)::before {
+            content: "d) ";
+        }
+        ul.letters li:nth-child(5)::before {
+            content: "e) ";
+        }
+        ul.letters li:nth-child(6)::before {
+            content: "f) ";
+        }
+        ul.letters li:nth-child(7)::before {
+            content: "g) ";
+        }        
+    </style>
 </head>
 
 <body>
@@ -78,15 +109,21 @@
         </p>
         <p>
             <a name="g3p1_th5">Теорема 1.</a>
-            <ul  class="list-unstyled">
-                <li><i>a) Финально постоянная последовательность сходится.</i></li>
-                <li><i>b) Любая окрестность предела последовательности содержит все члены последовательности,
+            <ul class="list-unstyled letters">
+                <li style="content: 'a';"><i>Финально постоянная последовательность сходится.</i></li>
+                <li><i>Любая окрестность предела последовательности содержит все члены последовательности,
                     за исключением конечного их числа.</i></li>
-                <li><i>c) Последовательность не может иметь двух различных пределов.</i></li>
-                <li><i>d) Сходящаяся последовательность ограничена.</i></li>                    
+                <li><i>Последовательность не может иметь двух различных пределов.</i></li>
+                <li><i>Сходящаяся последовательность ограничена.</i></li>                    
             </ul>
+            <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_g3p1_th5" aria-expanded="false" aria-controls="collapse_g3p1_th5">
+                Доказательство
+            </button>
+            
+            <div class="collapse" id="collapse_g3p1_th5">                        
+            $\blacktriangleleft$ 
             <p>
-                $\blacktriangleleft$ a) Если $x_n=A$ при $n>N$, то для любой окрестности $V(A)$ точки $A$
+                a) Если $x_n=A$ при $n>N$, то для любой окрестности $V(A)$ точки $A$
                 имеем $x_n\in{V(A)}$ при $n>N$, т.е. $\lim_{n\to\infty}{x_n}=A$.
             </p>
             <p>
@@ -95,39 +132,56 @@
             <p>
                 c) Это важнейший пункт теоремы. Пусть $\lim_{n\to\infty}{x_n}=A_1$ и $\lim_{n\to\infty}{x_n}=A_1$.
                 Если $A_1\neq{A_2}$, то фиксируем непересекающиеся окрестности $V(A_1),V(A_2)$ точек $А_1,А_2$.
-                В качестве таковых можно взять, например, $\delta$-окрестность этих точек 
-                при $\delta<\frac{1}{2}|A_1-A_2|$. По определению предела найдем числа $N_1$ и $N_2$ так, 
-                что $\forall{n}>N_1\ (x_n\in{V(A_1)})$ и $\forall{n}>N_2\ (x_n\in{V(A_2)})$. 
+                В качестве таковых можно взять, например, $\delta$-окрестность этих точек
+                при $\delta<\frac{1}{2}|A_1-A_2|$. По определению предела найдем числа $N_1$ и $N_2$ так,
+                что $\forall{n}>N_1\ (x_n\in{V(A_1)})$ и $\forall{n}>N_2\ (x_n\in{V(A_2)})$.
                 Тогда при $n>max\{N_1,N_2\}$ получим $x_n\in{V(A_1)}\cup{V(A_2)}$. Но это невозможно,
                 поскольку $V(A_1)\cup{V(A_2)}=\varnothing$.
             </p>
             <p>
                 d) Пусть $\lim_{n\to\infty}{x_n}=A$. Полагая в определении предела $\varepsilon=1$, найдем
-                номер $N$ такой, что $\forall{n}>N\ (|x_n-A|<1)$. Значит, при $n>N$ имеем $|x_n|<|A|+1$. 
+                номер $N$ такой, что $\forall{n}>N\ (|x_n-A|<1)$. Значит, при $n>N$ имеем $|x_n|<|A|+1$.
                 Если теперь взять $M>max\{|x_1|,...,|x_n|,|A|+1\}$, то получим, что $\forall{n}>N\ (|x_n|<{M})$.
-            </p>            
+            </p>
+            $\blacktriangleright$ 
+            </div>
         </p>
 
         <!-- END CONTAINER -->
     </div>
 
     <div class="container-sm">
+        <!-- BEGIN CONTAINER -->
+        <a name="name_ref"><h2 class="text-center">Указатель имен</h2></a>
+        <ul  class="list-unstyled">
+            <li><a href="#g3p1_def1">Последовательность</a></li>
+            <li><a href="#g3p1_def5">&#8212; ограниченная</a></li>
+            <li><a href="#g3p1_def3">&#8212; расходящаяся</a></li>
+            <li><a href="#g3p1_def3">&#8212; сходящаяся</a></li>
+            <li><a href="#g3p1_def4">&#8212; финально постоянная</a></li>
+            <li><a href="#g3p1_def2">Предел последовательности</a></li>            
+        </ul>
+        <!-- END CONTAINER -->
+    </div>
+
+    <div class="container-sm">
       <!-- BEGIN CONTAINER -->
       <h2 class="text-center">Содержание</h2>
-
-      <div class="row">
-        <div class="col-md"><a href="#g3">Глава III. Предел.</a></div>
-      </div>
-      <div class="row">
-        <div class="col-md offset-md-1"><a href="#g3p1">§1. Предел последовательности.</a></div>
-      </div>
-      <div class="row">
-        <div class="col-md offset-md-2"><a href="#g3p1s1">1. Определения и примеры.</a></div>
-      </div>
-      <div class="row">
-        <div class="col-md offset-md-2"><a href="#g3p1s2">2. Свойства передела последовательности</a></div>
-      </div>      
-      
+      <ul class="list-unstyled">
+        <li><a href="#g3">Глава III. Предел</a></li>
+        <li>
+            <ul style="list-style-type:none;">
+                <li><a href="#g3p1">§1. Предел последовательности</a></li>
+                <li>
+                    <ul style="list-style-type:none;">
+                        <li><a href="#g3p1s1">1. Определения и примеры</a></li>
+                        <li><a href="#g3p1s2">2. Свойства передела последовательности</a></li>
+                    </ul>
+                </li>                
+            </ul>        
+        </li>
+        <li><a href="#name_ref">Указатель имен</a></li>
+      </ul>
       <!-- END CONTAINER -->
     </div>
 </body>
