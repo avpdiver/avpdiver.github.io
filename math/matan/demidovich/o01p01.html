@@ -261,6 +261,40 @@
             $\blacktriangleright$
         </p>
         <hr>
+        <p>
+            <b>8.</b> Доказать неравенство
+            $$n!<\left(\frac{n+1}{2}\right)^n.$$
+            <i>Указание.</i> Использовать неравенство
+            $$\left(\frac{n+2}{n+1}\right)^{n+1}=\left(1+\frac{1}{n+1}\right)^{n+1}>2\quad (n=1,2,...).$$
+            $\blacktriangleleft$<br>
+            База индукции $n=1$:
+            $$1=1$$
+            Шаг индукции:
+            $$(n+1)!<\left(\frac{n+2}{2}\right)^{n+1}$$
+            Умножим обе части неравенства на $n+1$. При этом знак неравенста не изменится,
+            т.к. этот множитель всегда положителен:
+            $$
+            \begin{align*}
+            n!(n+1) &< \left(\frac{n+1}{2}\right)^n(n+1)  \\
+            (n+1)! &< \left(\frac{n+1}{2}\right)^n(n+1)  \\
+            (n+1)! &< \left(\frac{n+1}{2}\right)^n\frac{2(n+1)}{2}  \\
+            (n+1)! &< 2\left(\frac{n+1}{2}\right)^{n+1}  \\
+            \end{align*}
+            $$
+            Воспользовавшись указанием к заданию, замечаем, что
+            $$2\left(\frac{n+1}{2}\right)^{n+1} < \left(\frac{n+2}{2}\right)^{n+1},$$
+            так как
+            $$\frac{\left(\frac{n+2}{2}\right)^{n+1}}{2\left(\frac{n+1}{2}\right)^{n+1}}=\frac{1}{2}\left(\frac{n+2}{n+1}\right)^{n+1} > 1$$            
+            Отсюда следует, что
+            $$
+            \begin{align*}
+            (n+1)! &< 2\left(\frac{n+1}{2}\right)^{n+1}<\left(\frac{n+2}{2}\right)^{n+1}   \\
+            (n+1)! &< \left(\frac{n+2}{2}\right)^{n+1}
+            \end{align*}
+            $$
+            $\blacktriangleright$
+        </p>
+        <hr>
 
         <!-- END CONTAINER -->
     </div></div></div>
