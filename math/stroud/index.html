@@ -138,6 +138,36 @@
             </ul>
         </p>
 
+        <h3 class="text-center">Odd and even functions</h3>
+        <p>
+            <ul>
+                <li>If $f(-x)=f(x)$ then $f$ is called an even function and if $f(-x)=-f(x)$
+                    then $f$ is called an odd function. [45]</li>
+                <li>If $f_e(x)=\frac{f(x)+f(-x)}{2}$ can be defined it is called the <i>even</i> part of $f(x)$
+                    and if $f_o(x)=\frac{f(x)-f(-x)}{2}$ can be defined it is called the <i>odd</i> part of $f(x)$. [46]</li>
+            </ul>
+        </p>
+
+        <h3 class="text-center">Differentiation</h3>
+        <p>
+            <ul>
+                <li><i>Newton–Raphson method</i> [49]:<br>
+                    If $x=x_0$ is an approximate solution to the equation $f(x)=0$ then
+                    $x_1=x_0-\frac{f(x_0)}{f'(x_0)}$ gives a more accurate value, where
+                    $f'(x_0)$ is the derivative of $f(x)$ at $x=x_0$. This defines an 
+                    iterative procedure $x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}$ for $n\geq{0}$
+                    to find progressively more accurate values.
+                    <img src="images/newton_raphson_method.png"><br>
+                    From the diagram, $\frac{PB}{QB}=\left[\frac{dy}{dx}\right]_P$
+                    i.e. the value of the derivative of $y$ at the point $P$, where $x=x_0$.
+                    To find $QB$ we see that
+                    $$\frac{PB}{QB}=f'(x_0)\quad\text{and}\quad{PB}=f(x_0)$$
+                    $$QB=\frac{PB}{f'(x_0)}=\frac{f(x_0)}{f'(x_0)}=h$$
+                    $$x_1=x_0-h=x_0-\frac{f(x_0)}{f'(x_0)}.$$
+                </li>
+            </ul>
+        </p>
+
         <!-- END CONTAINER -->
     </div></div></div>
 
