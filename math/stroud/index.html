@@ -168,6 +168,63 @@
             </ul>
         </p>
 
+        <h3 class="text-center">Integration</h3>
+        <p>
+            <ul>
+                <li><i>Areas under curve</i> [26]:<br>
+                    Consider the area $A$ of the figure bounded by the curve $y=f(x)$,
+                    the $x$-axis and the two vertical lines through $x=a$ and $x=b$ (where $b > a$).<br>
+                    <img src="images/area_under_curve1.png"><br>
+                    To evaluate the area $A$ you need to consider the total area between the same
+                    curve and the $x$-axis from the left up to some arbitrary point $P$ on the curve with
+                    coordinates $(x, y)$ which we shall denote by $A_x$.<br>
+                    <img src="images/area_under_curve2.png"><br>
+                    Area $\delta{A_x}$ is the area enclosed by the strip under the arc $PQ$ where $Q$ has the
+                    coordinates $(x+\delta{x}, y+\delta{y})$. If the strip is approximated by a rectangle of
+                    height $y$ and width $\delta{x}$ then $\delta{A_x}\simeq{y\cdot\delta{x}}$. This means that:
+                    $$\frac{\delta{A_x}}{\delta{x}}\simeq{y}$$
+                    The error in this approximation is given by the area of $PQR$ in the figure to the right,
+                    where the strip has been magnified.<br>
+                    <img src="images/area_under_curve3.png"><br>
+                    If the width of the strip is reduced then the error is accordingly reduced.
+                    Also, if $\delta{x}\rightarrow{0}$ then $\delta{A_x}\rightarrow{0}$ and:
+                    $$\frac{\delta{A_x}}{\delta{x}}\rightarrow\frac{dA_x}{dx}\quad\text{so that, in the limit,}\quad\frac{dA_x}{dx}=y$$
+                    Consequently, because integration is the reverse process of differentiation it is seen that:
+                    $$A_x=\int{ydx}$$
+                    <i>The total area between the curve and the $x$-axis up to the point $P$ is given by the indefinite integral.</i><br>
+                    if $x=b$ then $A_b=\int_{(x=b)}{ydx}$ (the value of the integral and hence the area up to $b$) and
+                    if $x=a$ then $A_a=\int_{(x=a)}{ydx}$ (the value of the integral and hence the area up to $a$).<br>
+                    Because $b>a$, the difference in these two areas $A_b-A_a$ gives the required area $A$. That is:
+                    $$A=\int_{(x=b)}{ydx}-\int_{(x=a)}{ydx}\quad\text{which is written}\quad A=\int_a^b{ydx}$$
+                </li>
+                <li><i>Integration as a summation</i> [33]:<br>
+                    We have already seen that the area $A$ under a curve $y=f(x)$ between $x=a$ and $x=b$ is
+                    given by the definite integral:
+                    $$A=\int_a^b{ydx}$$
+                    <img src="images/integration_as_sum1.png"><br>
+                    Let’s look at this area a little more closely:<br>
+                    <img src="images/integration_as_sum2.png"><br>
+                    Let $P$ be the point $(x, y)$ on the curve and $Q$ a similar point $(x+\delta{x}, y+\delta{y})$.
+                    The approximate area $\delta{A}$ of the strip under the arc $PQ$ is given by
+                    $$\delta{A}=y\cdot\delta{x}$$
+                    As we have indicated earlier, the error in the approximation is the area above the rectangle.<br>
+                    If we divide the whole figure between $x=a$ and $x=b$ into a number of such strips,
+                    the total area is approximately the sum of the areas of all rectangles $y\cdot\delta{x}$.<br>
+                    I.e. $A\simeq$ the sum of all rectangles $y\cdot\delta{x}$ between $x=a$ and $x=b$. This can be written:
+                    $$A\simeq{\sum_{x=a}^{x=b}y\cdot\delta{x}}$$
+                    If we make the strips narrower, there will be more of them to cover the whole figure,
+                    but the total error in the approximation diminishes.<br>
+                    <img src="images/integration_as_sum3.png"><br>
+                    If we continue the process, we arrive at an infinite number of minutely narrow rectangles,
+                    each with an area too small to exist alone.<br>
+                    Then, in the limit as $\delta{x}\rightarrow{0}$, $A=\lim_{\delta{x}\rightarrow{0}}\sum_{x=a}^{x=b}y\cdot\delta{x}$.
+                    But we already know that $A=\int_a^b{ydx}$, then:
+                    $$A=\lim_{\delta{x}\rightarrow{0}}\sum_{x=a}^{x=b}y\cdot\delta{x}=\int_a^b{ydx}.$$
+
+                </li>
+            </ul>
+        </p>       
+
         <!-- END CONTAINER -->
     </div></div></div>
 
