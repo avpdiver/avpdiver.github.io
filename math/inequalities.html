@@ -69,7 +69,7 @@
 
                 <a name="ineq_koshi_bunyakovskiy">Неравенство Коши-Буняковского</a>
                 <div>
-                    $$\left(\sum_{i=1}^{n}{ab}\right)^2\leq{\sum_{i=1}^{n}{a^2}\sum_{i=1}^{n}{b^2}}$$
+                    $$\left(\sum_{i=1}^{n}{a_ib_i}\right)^2\leq{\sum_{i=1}^{n}{a_i^2}\sum_{i=1}^{n}{b_i^2}}$$
                 </div>
 
                 <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse"
@@ -80,6 +80,11 @@
 
                 <div class="collapse" id="proof_ineq_koshi_bunyakovskiy">
                     $\blacktriangleleft$
+                    $$
+                    \sum_{i=1}^{n}{(a_ix+b_i)^2} &= \sum_{i=1}^{n}{(a_i^2x^2+2a_ib_ix+b_i^2)} = \
+                                             &= \sum_{i=1}^{n}{a_i^2x^2} + \sum_{i=1}^{n}{2a_ib_ix} + \sum_{i=1}^{n}{b_i^2} = \
+                                             &= x^2\sum_{i=1}^{n}{a_i^2} + 2x\sum_{i=1}^{n}{a_ib_i} + \sum_{i=1}^{n}{b_i^2}
+                    $$
                     $\blacktriangleright$
                 </div>
 
