@@ -81,9 +81,28 @@
                 <div class="collapse" id="proof_ineq_koshi_bunyakovskiy">
                     $\blacktriangleleft$
                     $$
-                    \sum_{i=1}^{n}{(a_ix+b_i)^2} &= \sum_{i=1}^{n}{(a_i^2x^2+2a_ib_ix+b_i^2)} = \
-                                             &= \sum_{i=1}^{n}{a_i^2x^2} + \sum_{i=1}^{n}{2a_ib_ix} + \sum_{i=1}^{n}{b_i^2} = \
-                                             &= x^2\sum_{i=1}^{n}{a_i^2} + 2x\sum_{i=1}^{n}{a_ib_i} + \sum_{i=1}^{n}{b_i^2}
+                    \sum_{i=1}^{n}{(a_ix+b_i)^2} = \sum_{i=1}^{n}{(a_i^2x^2+2a_ib_ix+b_i^2)} = \
+                                                 = \sum_{i=1}^{n}{a_i^2x^2} + \sum_{i=1}^{n}{2a_ib_ix} + \sum_{i=1}^{n}{b_i^2} = \
+                                                 = x^2\sum_{i=1}^{n}{a_i^2} + 2x\sum_{i=1}^{n}{a_ib_i} + \sum_{i=1}^{n}{b_i^2}
+                    $$
+                    Выполним замены:
+                    $$
+                    A = \sum_{i=1}^{n}{a_i^2} \
+                    B = \sum_{i=1}^{n}{a_ib_i} \
+                    C = \sum_{i=1}^{n}{b_i^2}
+                    $$
+                    Получим квадратное неравенство:
+                    $$Ax^2+2Bx+C\geq{0}$$                    
+                    Т.е. $Ax^2+2Bx+C$ целиком лежит выше оси $x$ и либо не имеет корней, либо имеет один корень.<br>
+                    Из этого следует, что дискрименант $(2B)^2-4AC\leq{0}$. Отсюда:
+                    $$
+                    (2B)^2-4AC\leq{0} \
+                    4B^2\leq{4AC} \
+                    B^2\leq{AC}
+                    $$
+                    Выполним обратные замены:
+                    $$
+                    \left(\sum_{i=1}^{n}{a_ib_i}\right)^2\leq{\sum_{i=1}^{n}{a_i^2}\sum_{i=1}^{n}{b_i^2}}
                     $$
                     $\blacktriangleright$
                 </div>
