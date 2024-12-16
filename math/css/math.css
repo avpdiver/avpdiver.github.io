@@ -1,0 +1,54 @@
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+ul.letters li:nth-child(1)::before {
+    content: "a) ";
+}
+
+ul.letters li:nth-child(2)::before {
+    content: "b) ";
+}
+
+ul.letters li:nth-child(3)::before {
+    content: "c) ";
+}
+
+ul.letters li:nth-child(4)::before {
+    content: "d) ";
+}
+
+ul.letters li:nth-child(5)::before {
+    content: "e) ";
+}
+
+ul.letters li:nth-child(6)::before {
+    content: "f) ";
+}
+
+ul.letters li:nth-child(7)::before {
+    content: "g) ";
+}
+
+section.fact {
+    background-color: rgb(255, 186, 186);
+    padding: 10px 10px 10px 10px;
+}
+
+section.definition {
+    background-color: rgb(201, 233, 201);
+    padding: 10px 10px 10px 10px;
+}
+
+section.statement {
+    background-color: rgb(167, 253, 253);
+    padding: 10px 10px 10px 10px;
+}
+
+section.proof {
+    background-color: rgb(222, 252, 252);
+    padding: 10px 10px 10px 10px;
+}
