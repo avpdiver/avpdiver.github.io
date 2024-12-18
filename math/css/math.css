@@ -33,24 +33,32 @@ ul.letters li:nth-child(7)::before {
     content: "g) ";
 }
 
+section {
+    text-align: justify;
+}
+
 section.fact {
     background-color: rgb(255, 186, 186);
     padding: 10px 10px 10px 10px;
+    text-align: justify;
 }
 
 section.definition {
     background-color: rgb(201, 233, 201);
     padding: 10px 10px 10px 10px;
+    text-align: justify;
 }
 
 section.statement {
     background-color: rgb(167, 253, 253);
     padding: 10px 10px 10px 10px;
+    text-align: justify;
 }
 
 section.proof {
     background-color: rgb(222, 252, 252);
     padding: 10px 10px 10px 10px;
+    text-align: justify;
 }
 
 table.reference td{

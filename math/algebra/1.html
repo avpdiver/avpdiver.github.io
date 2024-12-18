@@ -34,17 +34,26 @@
                 <!-- BEGIN CONTAINER -->
 
                 <section id="def1.1" class="definition">
-                    <b>DEFINITION 1.1.</b> Let $a,b\in\mathbb{Z}$. We say that "$b$ divides $a$", or "$b$ is a divisor of $a$", or "$a$ is
-                    a multiple of $b$", and write $b|a$, if there is an integer $c$ such that $a=bc$.
+                    <b>DEFINITION 1.1. Divisor.</b><br>
+                    Let $a,b\in\mathbb{Z}$. We say that "$b$ <b>divides</b> $a$", or "$b$ is a <b>divisor</b> of $a$", or "$a$ is
+                    a <b>multiple</b> of $b$", and write $b|a$, if there is an integer $c$ such that $a=bc$.
+                </section>
+
+                <br>
+                
+                <section>
+                    Keep in mind that $0$ only divides $0$.
                 </section>
                 
                 <br>
 
                 <section id="lemma1.2" class="statement">
-                    <b>LEMMA 1.2.</b> If $b|a$ and $a\ne0$, then $|b|\le|a|$.
+                    <b>LEMMA 1.2.</b><br>
+                    If $b|a$ and $a\ne0$, then $|b|\le|a|$.
                 </section>
                 <section class="proof">
-                    <i>Proof.</i> Indeed, by definition of divisibility we have $a=bc$ for some integer $c$; 
+                    <i>Proof.</i><br>
+                    Indeed, by definition of divisibility we have $a=bc$ for some integer $c$; 
                     in particular, both $b$ and $c$ are nonzero since $a\ne0$. Since $c\in\mathbb{Z}$ and $c\ne0$, we have $|c|\ge{1}$.
                     And then
                     $$|a|=|b|\cdot|c|\ge{|b|}\cdot{1} = |b|$$
@@ -54,24 +63,26 @@
                 <br>
 
                 <section>
-                    "Divisibility" defines an order relation on the set of nonnegative integers. 
+                    <b>Divisibility</b> defines an order relation on the set of nonnegative integers. 
                     What Lemma 1.2 says is that, to some extent, this "new" order relation is compatible with the ordinary one $\le$.
                 </section>
 
                 <br>
 
                 <section class="fact">
-                    <b>FACT (Well-ordering principle).</b> Every nonempty set of nonnegative integers contains a least element.
+                    <b>FACT (Well-ordering principle).</b><br>Every nonempty set of nonnegative integers contains a least element.
                 </section>
 
                 <br>
 
                 <section id="theorem1.3" class="statement">
-                    <b>THEOREAM 1.2. (Division with remainder)</b> Let $a,b$ be integers, with $b\ne0$. 
+                    <b>THEOREM 1.3. Division with remainder.</b><br>
+                    Let $a,b$ be integers, with $b\ne0$. 
                     Then there exist a unique $q\in\mathbb{Z}$ and a unique $r\in\mathbb{Z}$ such that $a=bq+r$ with $0\le{r}\lt|b|$.
                 </section>
                 <section class="proof">
-                    <i>Proof.</i> We can assume that $b\gt{0}$. 
+                    <i>Proof.</i><br>
+                    We can assume that $b\gt{0}$.<br>
                     Indeed, if $b\lt{0}$, we can apply the statement to $-b\gt{0}$ and then flip the sign of $q$ after the fact. 
                     Switching the sign of $b$ does not change $|b|$, so the condition on $r$ is unchanged.<br>
                     Assume then that $b\gt{0}$, and consider all integer linear combinations of $a$ and $b$ of the form $a-bx$ with $x\in\mathbb{Z}$. 
@@ -90,7 +101,7 @@
                     Since $r\ge{b}$ leads to a contradiction, we can conclude that $r\lt{b}$ as we claimed.<br>
                     For (2), assume that $q',r'$ are also integers satisfying the requirement spelled out in the theorem: 
                     that is, $a=bq'+r'$, and $0\le{r'}\lt{b}$. 
-                    We will show that necessarily $q'=q$ and $r'=r$ (this is what we mean by stating that $q$ and $r$ are "unique").<br>
+                    We will show that necessarily $q'=q$ and $r'=r$ (this is what we mean by stating that $q$ and $r$ are <b>unique</b>).<br>
                     Since $a=bq+r=bq'+r'$, we have $$b(q-q')=r'-r.\qquad\qquad\qquad(1.1)$$<br>
                     Now, since both $r$ and $r'$ are in the interval $[0, b-1]$, their difference cannot exceed $b-1$. 
                     In other words, $|r'-r|\le{b-1}$, and in particular $|r'-r|\lt|b|$. 
@@ -98,6 +109,102 @@
                     $|b|\le|r'-r|$, contradicting the fact that $|b|>|r'-r|$ we observed a moment ago. 
                     The only possibility then is that $r'-r=0$. This shows that $r'=r$, and further $b(q-q')=0$. 
                     Since $b\ne0$, this implies that $q-q'=0$, and it follows that $q'=q$.
+                </section>
+
+                <br>
+
+                <section id="def1.5" class="definition">
+                    <b>DEFINITION 1.5. Greatest common divisor.</b><br>
+                    Let $a,b\in\mathbb{Z}$. We say that a nonnegative integer $d$ is the <b>greatest common divisor</b> of $a$ and $b$, 
+                    denoted $gcd(a, b)$ or simply $(a, b)$, if:<br>
+                    (i) $d | a$ and $d | b$;<br>
+                    (ii) if $c | a$ and $c | b$, then $c | d$.
+                </section>
+                
+                <br>
+
+                <section>
+                    If at least one of $a$ and $b$ is not $0$, then $d = gcd(a, b)\ne 0$. 
+                    Indeed, $d$ must divide both $a$ and $b$ according to the requirement (i) in the definition 
+                    (this makes $d$ a <b>common divisor</b>), so $d$ cannot be $0$ unless both $a$ and $b$ are $0$ 
+                    - keep in mind that $0$ only divides $0$.
+                    <br>
+                    The requirement (ii) in the definition says that if $c$ is also a common divisor, then it 
+                    must divide $d$. By <a href="#lemma1.2">Lemma 1.2</a>, this implies that $|c|\le|d|$ if $d\ne 0$, and hence $c\le{d}$ since 
+                    $d$ is nonnegative. Therefore $d$ is the <b>greatest</b> (as in <b>largest</b>) common divisor of 
+                    $a$ and $b$ if $a$ and $b$ are not both $0$.
+                    <br>
+                    Why requirement (ii) is not something like:<br>
+                    (ii) if $c | a$ and $c | b$, then $c\le{d}$,<br>
+                    which would seem to justify the terminology <b>greatest common divisor</b> in a more direct way. 
+                    The main reason is that when we recast this notion for more general <b>rings</b>, 
+                    the relation of divisibility will be available, while the (perhaps) simpler relation $\le$ will not. 
+                    Also, Definition 1.5 makes good sense for all possible integers $a, b$, including the case $a = b = 0$: 
+                    in this case, since every number divides $0$, the second requirement says that every integer should divide $gcd(0, 0)$. 
+                    Since $0$ is the only number divisible by every integer, this tells us that $gcd(0, 0) = 0$ according to Definition 1.5. 
+                    Even in this case, $gcd(a, b)$ is <b>greatest</b>; 
+                    but with respect to the divisibility relation rather than the ordinary order relation $\le$.
+                </section>
+
+                <br>
+
+                <section id="theorem1.8" class="statement">
+                    <b>THEOREM 1.8.</b><br>
+                    Let $a,b$ be integers. Then the greatest common divisor $d = gcd(a, b)$ is an integer linear combination of $a$ and $b$. 
+                    That is, there exist integers $m$ and $n$ such that $d = ma + nb$.<br>
+                    In fact, if $a$ and $b$ are not both $0$, then $gcd(a, b)$ is the smallest positive linear combination of $a$ and $b$.
+                </section>
+                <section class="proof">
+                    <i>Proof.</i><br>
+                    If $a = b = 0$, then $gcd(a, b) = gcd(0, 0) = 0$, which is a linear 
+                    combination of $a$ and $b$ (because $0 = 1 · 0 + 1 · 0$). Therefore, we may assume that 
+                    $a$ and $b$ are not both $0$. Consider all linear combinations $ma + nb$ of $a$ and $b$. 
+                    I claim that some of them are positive. Indeed, take $m = a, n = b$; then $ma + nb = a^2 + b^2$ , and this 
+                    number is positive since $a$ and $b$ are not both $0$.
+                    <br>
+                    Therefore, the set $$S = \{ma + nb\ |\ m\in\mathbb{Z}, n\in\mathbb{Z}, ma + nb \gt 0\}$$
+                    is nonempty. This is the standard setting to apply the well-ordering principle: since $S$ 
+                    is a nonempty set of nonnegative integers, it must have a least element. Let $d$ be this 
+                    element, and let $m$ and $n$ be integers such that $d = ma + nb$. That is, $d$ is the smallest 
+                    positive linear combination of $a$ and $b$. We are going to verify that $d$ is the $gcd$ of $a$ and $b$, 
+                    and this will prove the theorem.
+                    <br>
+                    Since $d\in{S}$, then $d \gt 0$: so $d$ is nonnegative and not equal to $0$. In order to prove that 
+                    $d$ is the $gcd$ of $a$ and $b$, we have to prove that<br>
+                    (i) $d | a$ and $d | b$;<br>
+                    (ii) if $c | a$ and $c | b$, then $c | d$.<br>
+                    If $a = 0$, $d|a$ is automatic. If $a \ne 0$, we can use division with remainder: 
+                    by <a href="#theorem1.3">Theorem 1.3</a>, we know that there exist integers $q$ and $r$ such that $a = dq + r$, 
+                    with $0 \le r \lt d$. What can we say about $r$? Note that
+                    $$r = a - dq = a - (ma + nb) q = a (1 - mq) + b (-nq) :$$
+                    this shows that $r$ is a linear combination of $a$ and $b$. Can it be an element of $S$? No! 
+                    Because $r \lt d$, and $d$ has been chosen to be the smallest element of $S$. But then $r$ cannot 
+                    be positive, since $r$ is a linear combination of $a$ and $b$, and $S$ contains all <i>positive</i> linear 
+                    combinations of $a$ and $b$. Since $r \ge 0$ and $r$ is not positive, it follows that $r = 0$. 
+                    This proves that $a = dq$, showing that $d|a$.
+                    <br>
+                    By essentially the same argument, we can deduce that $d|b$. This takes care of (i).
+                    <br>
+                    We still have to prove (ii). Suppose we have a common divisor $c$ of $a$ and $b$: $c|a$ and $c|b$. 
+                    Then we have $a = uc, b = vc$ for some integers $u$ and $v$. This gives $$d = ma + nb = m (uc) + n (vc) = (mu + nv) c$$ 
+                    and proves that $c|d$, as we needed.
+                </section>
+
+                <br>
+
+                <section id="corollary1.9" class="statement">
+                    <b>COROLLARY 1.9.</b><br>
+                    Let $a, b$ be integers. Then $gcd(a, b) = 1$ if and only if $1$ may be expressed as a linear combination of $a$ and $b$.
+                </section>
+                <section class="proof">
+                    <i>Proof.</i><br>
+                    ($\Rightarrow$) If $gcd(a, b) = 1$, then the number $1$ may be expressed as a linear combination 
+                    of $a$ and $b$ by Theorem 1.8.
+                    <br>
+                    ($\Leftarrow$) If $1$ may be expressed as a linear combination of $a$ and $b$, 
+                    then $1$ is necessarily the smallest positive linear combination of $a$ and $b$, 
+                    because $1$ is the smallest positive integer. 
+                    It follows that $gcd(a, b) = 1$, again as a consequence of Theorem 1.8.
                 </section>
 
                 <!-- END CONTAINER -->
