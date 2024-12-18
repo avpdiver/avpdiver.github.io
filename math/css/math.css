@@ -52,3 +52,7 @@ section.proof {
     background-color: rgb(222, 252, 252);
     padding: 10px 10px 10px 10px;
 }
+
+table.reference td{
+    padding: 10px 10px 10px 10px;
+}
