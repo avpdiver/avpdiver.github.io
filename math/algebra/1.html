@@ -70,7 +70,7 @@
                 <br>
 
                 <section class="fact">
-                    <b>FACT (Well-ordering principle).</b><br>Every nonempty set of nonnegative integers contains a least element.
+                    <b>Well-ordering principle.</b><br>Every nonempty set of nonnegative integers contains a least element.
                 </section>
 
                 <br>
@@ -213,6 +213,73 @@
                     <b>DEFINITION 1.10. Relatively prime integers.</b><br>
                     Let $a,b\in\mathbb{Z}$. We say that $a$ and $b$ are <b>relatively prime</b> if $gcd(a, b) = 1$.
                 </section>
+
+                <br>
+
+                <section id="corollary1.11" class="statement">
+                    <b>COROLLARY 1.11.</b><br>
+                    Let $a, b, c$ be integers. If $a|bc$ and $gcd(a, b) = 1$, then $a|c$.
+                </section>
+                <section class="proof">
+                    <i>Proof.</i><br>
+                    By Theorem 1.8, $1 = ma + nb$ for some integers $m$ and $n$. Multiply by $c$:
+                    $$c = 1 \cdot c = (ma + nb) c = mac + nbc = (mc) a + n (bc).$$
+                    Now the hypothesis tells us that $a|bc$, so $bc = ra$ for some integer $r$. 
+                    Then $$c = (mc) a + n (ra) = (mc + nr) a,$$ and this shows that $a|c$ as needed.
+                </section>
+
+                <br>
+
+                <section>
+                    <b>Euclidean algorithm</b><br>
+                    Given two integers $a$ and $b$, we may assume that $b\ne0$ 
+                    (if $b = 0$, then $gcd(a, b) = a$, so there is nothing to compute). 
+                    We can then apply division with remainder repeatedly, like this: 
+                    $$a = b q_0 + r_0  \qquad 0 \le r_1 \lt b$$
+                    $$b = r_0 q_1 + r_1  \qquad 0 \le r_1 \lt r0$$
+                    $$r_0 = r_1 q_2 + r_2  \qquad 0 \le r_2 \lt r1$$
+                    $$r_1 = r_2 q_3 + r_3  \qquad 0 \le r_3 \lt r2$$
+                    $$···$$
+                    $$r_{n-2} = r_{n-1} q_n + r_n  \qquad 0 \le r_n \lt r_{n-1}$$
+                    $$r_{n-1} = r_n q_{n+1} + 0$$
+                    We keep going so long as the remainder of the last division is not 0. 
+                    Since at each step the remainder decreases and remains nonnegative, at some point it must become $0$. 
+                    Last nonzero reminder ${r_n} = $gcd(a,b)$.
+                </section>
+
+                <br>
+
+                <section id="lemma1.15" class="statement">
+                    <b>LEMMA 1.15.</b><br>
+                    Let $a, b, q, r$ be integers, with $b \ne 0$, and assume that $a = bq + r$. 
+                    Then $gcd(a, b) = gcd(b, r)$.
+                </section>
+                <section class="proof">
+                    <i>Proof.</i><br>
+                    It is enough to prove that the pairs $a$ and $b$, $b$ and $r$ have the same common divisors: 
+                    then the largest among the common divisors will be the $gcd$ of both $(a, b)$ and $(b, r)$, proving the statement.
+                    <br>
+                    Let $c$ be a common divisor of $a$ and $b$: $c|a$ and $c|b$. Then $a = cs, b = ct$ for some integers $s$ and $t$. 
+                    It follows that $$r = a - bq = cs - ctq = c (s - tq),$$
+                    and this shows that $c|r$. Since we already have that $c|b$, we see that $c$ is a common divisor of $b$ and $r$.
+                </section>
+
+                <br>
+
+                <section id="theorem1.14" class="statement">
+                    <b>THEOREM 1.14. Euclidean algorithm.</b>
+                </section>
+                <section class="proof">
+                    <i>Proof.</i><br>
+                    By Lemma 1.15: $gcd(a, b) = gcd(b, r_0) = gcd(r_0, r_1) = \dots = gcd(r_{n-1}, r_n) = gcd(r_n, 0) = r_n$.
+                </section>
+
+                <br>
+
+                <section class="fact">
+                    If necessary, one can chase the Euclidean algorithm backwards and find integers $m, n$ such that $gcd(a, b) = ma + nb$.
+                </section>
+                
                 <!-- END CONTAINER -->
             </div>
         </div>
