@@ -280,6 +280,56 @@
                     If necessary, one can chase the Euclidean algorithm backwards and find integers $m, n$ such that $gcd(a, b) = ma + nb$.
                 </section>
                 
+                <br>
+
+                <section id="def1.17" class="definition">
+                    <b>DEFINITION 1.17. Irreducible integer. Composit integer.</b><br>
+                    An integer $p$ is <b>irreducible</b> if $p \ne ±1$ and the only divisors of $p$ are $\pm1, \pm{p}$.
+                    <br>
+                    An integer $\ne 0, \ne \pm1$ is <b>reducible</b> or <b>composite</b> if it is not irreducible.
+                </section>
+
+                <br>
+
+                <section id="lemma1.18" class="statement">
+                    <b>LEMMA 1.18.</b><br>
+                    Assume that $p$ is an irreducible integer and that $b$ is not a multiple of $p$. 
+                    Then $b$ and $p$ are relatively prime, that is, $gcd(p, b) = 1$.
+                </section>
+                <section class="proof">
+                    <i>Proof.</i><br>
+                    If $c$ is a common divisor of $p$ and $b$, then in particular $c = \pm1$ or $c = \pm{p}$, since 
+                    $c | p$ and $p$ is irreducible. Since $c$ is also a divisor of $b$, and $p$ is not a divisor of $b$ by 
+                    hypothesis, we deduce that necessarily $c = \pm1$. This is true of all common divisors of $p$ and $b$, 
+                    so it is in particular true for $gcd(p, b)$. Since $gcd(p, b) \ge 0$, the only possibility is $gcd(p, b) = 1$.
+                </section>
+
+                <br>
+                
+                <section id="def1.19" class="definition">
+                    <b>DEFINITION 1.19. Prime integer.</b><br>
+                    An integer $p$ is <b>prime</b> if $p \ne \pm1$ and whenever $p$ divides the 
+                    product $bc$ of two integers $b$, $c$, then $p$ divides $b$ or $p$ divides $c$.
+                </section>
+
+                <br>
+
+                <section class="fact">
+                    According to Definition 1.19, $0$ is prime integer.
+                    <br>
+                    This is an unusual choice: most references do not include $0$ as a prime integer. 
+                    This nonstandard choice allow us to align with some terminology involving <b>ideals</b> and 
+                    to occasionally state sharper statements.
+                    <br>
+                    In mathematics, <b>or</b> is not exclusive. The definition says "... $p$ divides $b$ <b>or</b> $p$ divides $c$": 
+                    this allows for the possibility that $p$ may divide both $b$ and $c$.
+                    <br>
+                    It follows from the definition that if $p$ is prime, and $p$ divides a product of several integers 
+                    $a_i: p|a1 \dots a_s$, then $p$ must divide (at least) one of the integers $a_i$.
+                </section>
+                
+                <br>
+
                 <!-- END CONTAINER -->
             </div>
         </div>
