@@ -66,6 +66,12 @@ section.proof {
     text-align: justify;
 }
 
+section.example {
+    background-color: rgb(247, 252, 229);
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+}
+
 table.reference td{
     padding: 10px 10px 10px 10px;
 }

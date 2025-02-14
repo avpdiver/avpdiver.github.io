@@ -53,6 +53,25 @@
                     <li>$Y=\emptyset$ - ответов нет, требуется что-то делать с самими объектами</li>
                 </ul>
 
+                <br>
+                <img src="images/1.png">
+
+                <br>
+                <br>
+                <h4 class="text-center">Предсказательная модель</h4>
+
+                <section class="definition">
+                    <b>Модель (predictive model)</b> - параметрическое семейство функций
+                    $$A=\{a(x,w)\ |\ w \in W\}$$
+                    где $a:X \times W \to Y$ - фиксированная функция, $W$ - множество допустимых значений параметра $w$.
+                </section>
+                <section class="example">
+                    <b>Пример</b><br>
+                    <i>Линейная модель</i> с параметром $w=(w_1,\dots,w_n)\in\mathbb{R}^n$:
+                    $$a(x,w)=\sum_{j=1}^nw_jf_j(x) - \text{регрессия и ранжирование}$$
+                    $$a(x,w)=sign\left(\sum_{j=1}^nw_jf_j(x)\right) - \text{бинарная классификация}$$
+                </section>
+
                 <!-- END CONTAINER -->
             </div>
         </div>
