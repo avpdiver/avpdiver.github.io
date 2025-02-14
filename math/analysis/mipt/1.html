@@ -1,0 +1,110 @@
+<head>
+    <title>Последовательность действительных чисел</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <script src="/js/math.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link href="/css/math.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h3 class="text-center">Последовательность действительных чисел</h3>
+
+    <div class="container" style="text-align: justify;">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- BEGIN CONTAINER -->
+
+                <section class="statement" data-bs-toggle="collapse" data-bs-target="#th1">
+                    <b>Теорема</b><br>
+                    Пусть множество $A\subset\mathbb{R}$ ограничено сверху (снизу).
+                    Тогда существует единственный $\sup{A}$ ($\inf{A}$).
+                </section>
+                <section id="th1" class="proof collapse">
+                    <b>Доказательство</b><br>
+                    <p>
+                        Рассмотрим множество $B$ всех верхних граней $A$. Т.к. $A$ ограничено сверху, то
+                        $B\ne\emptyset$.
+                        Т.к. $A$ лежит левее $B$, то по аксиоме непрерывности $\exists{c}\in\mathbb{R}:\
+                        \forall{a}\in{A},\forall{b}\in{B} \hookrightarrow a\le{c}\le{b}$.
+                    </p>
+                    <p>
+                        Покажем, что $c=\sup{A}$. Т.к. $\forall{a}\in{A} \hookrightarrow a\le{c}$, то $c$ является
+                        верхней гранью $A$, т.е. $c\in{B}$.
+                        Поскольку $\forall{b}\in{B} \hookrightarrow c\le{b}$, то $c$ является минимальным элементом $B$.
+                        Итак, $c=\sup{A}$.
+                    </p>
+                    <p>
+                        Предположим, что $M_1,\ M_2$ - два различных $\sup{A}$. Тогда $M_1\in{B},\ M_2\in{B}$. Без
+                        потери общности, пусть $M_1\lt{M_2}$.
+                        Тогда $M_2$ не является минимальным элементом $B$. Противоречие.
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Предел последовательности</b><br>
+                    <p>
+                        Число $a$ называется <b>пределом последовательности</b> ${a_n}$ (пишут $a=\lim_{n\to\infty}$ или $a_n\to\infty$ при $n\to\infty$), 
+                        $$\forall\epsilon\gt{0}\ \exists{N(\epsilon)}:\ \forall{n}\ge{N} \hookrightarrow a_n\in{U_{\epsilon}(a)},$$
+                        т.е.
+                        $$\forall\epsilon\gt{0}\ \exists{N(\epsilon)}:\ \forall{n}\ge{N} \hookrightarrow |a_n-a|\lt\epsilon$$
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="statement" data-bs-toggle="collapse" data-bs-target="#th2">
+                    <b>Теорема о единственности предела</b><br>
+                    Последовательность не может иметь более одного предела из $\overline{\mathbb{R}}$.
+                </section>
+                <section id="th2" class="proof collapse">
+                    <b>Доказательство</b><br>
+                    <p>
+                        Предположим противное: пусть последовательность ${a_n}$ имеет два предела $a,b\in\overline{\mathbb{R}},\ a\ne{b}$. 
+                        Выберем $\epsilon\gt{0}$ так, чтобы $U_{\epsilon}(a) \cap U_{\epsilon}(b) = \emptyset$. 
+                        По определению предела $\exists{N_1}:\ \forall{n}\ge{N_1} \hookrightarrow a_n \in U_{\epsilon}(a)$ и 
+                        $\exists{N_2}:\ \forall{n}\ge{N_2} \hookrightarrow a_n \in U_{\epsilon}(b)$. При $N\ge\max\{N_1, N_2\}$ получаем 
+                        $a_n \in U_{\epsilon}(a) \cap U_{\epsilon}(b)$. Противоречие.
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="statement" data-bs-toggle="collapse" data-bs-target="#th3">
+                    <b>Теорема</b><br>
+                    Сходящаяся последовательность ограничена.
+                </section>
+                <section id="th3" class="proof collapse">
+                    <b>Доказательство</b><br>
+                    <p>
+                        Пусть последовательность $a=\lim_{n\to\infty}{a_n}$. Возьмем $\epsilon=1$. 
+                        По определению предела $\exists{N}:\ \forall{n} \ge N \hookrightarrow a_n \in U_1(a)$, т.е.
+                        $$-(|a|+1) \le a-1 \lt a_n \lt a+1 \le |a|+1$$
+                        $$|a_n| \le ||a|+1|$$
+                        $$|a_n| \le |a|+1$$
+                    </p>
+                    <p>
+                        Определим $M=\max\{|a_1|,\dots,|a_{N-1}|, |a|+1\}$. Тогда $\forall{n} \hookrightarrow |a_n| \le M$, 
+                        т.е. последовательность $a_n$ ограничена.
+                    </p>
+                </section>
+
+                <!-- END CONTAINER -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
