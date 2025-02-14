@@ -10,81 +10,29 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
 
+    <script src="/js/math.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            }
-        };
-    </script>
 
-    <style>
-        a:link,
-        a:visited,
-        a:hover,
-        a:active {
-            text-decoration: none;
-        }
-
-        ul.letters li:nth-child(1)::before {
-            content: "a) ";
-        }
-
-        ul.letters li:nth-child(2)::before {
-            content: "b) ";
-        }
-
-        ul.letters li:nth-child(3)::before {
-            content: "c) ";
-        }
-
-        ul.letters li:nth-child(4)::before {
-            content: "d) ";
-        }
-
-        ul.letters li:nth-child(5)::before {
-            content: "e) ";
-        }
-
-        ul.letters li:nth-child(6)::before {
-            content: "f) ";
-        }
-
-        ul.letters li:nth-child(7)::before {
-            content: "g) ";
-        }
-    </style>
+    <link href="/css/math.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+    <h3 class="text-center">Важные равенства и неравенства</h3>
     <div class="container" style="text-align: justify;">
-        <div class="row"><a href="/index.html">Начало</a></div>
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <!-- BEGIN CONTAINER -->
 
-                <h3 class="text-center">Важные равенства и неравенства</h3>
-                <p>
-
-                <a name="ineq_koshi_bunyakovskiy"><h4>Неравенство Коши-Буняковского</h4></a>
-                <div>
+                <section class="definition" data-bs-toggle="collapse" data-bs-target="#sol1">
+                    <b>Неравенство Коши-Буняковского</b><br>
                     $$\left(\sum_{i=1}^{n}{a_ib_i}\right)^2\leq{\sum_{i=1}^{n}{a_i^2}\sum_{i=1}^{n}{b_i^2}}$$
-                </div>
-
-                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#proof_ineq_koshi_bunyakovskiy" aria-expanded="false"
-                    aria-controls="proof_ineq_koshi_bunyakovskiy">
-                    Доказательство
-                </button>
-
-                <div class="collapse" id="proof_ineq_koshi_bunyakovskiy">
-                    $\blacktriangleleft$
+                </section>
+                <section class="collapse proof" id="sol1">
                     $$
                     \begin{align*}
                     \sum_{i=1}^{n}{(a_ix+b_i)^2} &= \sum_{i=1}^{n}{(a_i^2x^2+2a_ib_ix+b_i^2)} = \\
-                                                 &= \sum_{i=1}^{n}{a_i^2x^2} + \sum_{i=1}^{n}{2a_ib_ix} + \sum_{i=1}^{n}{b_i^2} = \\
-                                                 &= x^2\sum_{i=1}^{n}{a_i^2} + 2x\sum_{i=1}^{n}{a_ib_i} + \sum_{i=1}^{n}{b_i^2}
+                    &= \sum_{i=1}^{n}{a_i^2x^2} + \sum_{i=1}^{n}{2a_ib_ix} + \sum_{i=1}^{n}{b_i^2} = \\
+                    &= x^2\sum_{i=1}^{n}{a_i^2} + 2x\sum_{i=1}^{n}{a_ib_i} + \sum_{i=1}^{n}{b_i^2}
                     \end{align*}
                     $$
                     Выполним замены:
@@ -96,7 +44,7 @@
                     \end{align*}
                     $$
                     Получим квадратное неравенство:
-                    $$Ax^2+2Bx+C\geq{0}$$                    
+                    $$Ax^2+2Bx+C\geq{0}$$
                     Т.е. $Ax^2+2Bx+C$ целиком лежит выше оси $x$ и либо не имеет корней, либо имеет один корень.<br>
                     Из этого следует, что дискрименант $(2B)^2-4AC\leq{0}$. Отсюда:
                     $$
@@ -110,10 +58,7 @@
                     $$
                     \left(\sum_{i=1}^{n}{a_ib_i}\right)^2\leq{\sum_{i=1}^{n}{a_i^2}\sum_{i=1}^{n}{b_i^2}}
                     $$
-                    $\blacktriangleright$
-                </div>
-
-                </p>
+                </section>
 
                 <!-- END CONTAINER -->
             </div>

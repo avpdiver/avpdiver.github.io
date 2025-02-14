@@ -10,14 +10,8 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
 
+    <script src="/js/math.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            }
-        };
-    </script>
 
     <link href="/css/math.css" rel="stylesheet" type="text/css">
 </head>
@@ -29,139 +23,140 @@
             <div class="col-md-8 offset-md-2">
                 <!-- BEGIN CONTAINER -->
 
-                    <section class="definition">
-                        <b>Комплексное число</b><br>
-                        <b>Комплексным числом</b> называется упорядоченная пара $(a,b), a,b\in\mathbb{R}$.<br>
-                        Множество комплексных чисел обозначается $\mathbb{C}$.<br>
-                    </section>
-                    
-                    <br>
+                <section class="definition">
+                    <b>Комплексное число</b><br>
+                    <b>Комплексным числом</b> называется упорядоченная пара $(a,b), a,b\in\mathbb{R}$.<br>
+                    Множество комплексных чисел обозначается $\mathbb{C}$.<br>
+                </section>
 
-                    <section class="definition">
-                        <b>Аксиомы комплексных чисел</b>:<br>
-                        <ol>
-                            <li>$(a,b)=(c,d) \iff a=c \land b=d$</li>
-                            <li>$(a,b)+(c,d):=(a+c,b+d)$</li>
-                            <li>$(a,b)\cdot(c,d):=(ac-bd,ad+bc)$</li>
-                        </ol>
-                    </section>
-                    <section class="fact">
-                        $(x,0)\equiv{x}\implies\mathbb{R}\subset\mathbb{C}$
-                    </section>
+                <br>
 
-                    <br>
+                <section class="definition">
+                    <b>Аксиомы комплексных чисел</b>:<br>
+                    <ol>
+                        <li>$(a,b)=(c,d) \iff a=c \land b=d$</li>
+                        <li>$(a,b)+(c,d):=(a+c,b+d)$</li>
+                        <li>$(a,b)\cdot(c,d):=(ac-bd,ad+bc)$</li>
+                    </ol>
+                </section>
+                <section class="fact">
+                    $(x,0)\equiv{x}\implies\mathbb{R}\subset\mathbb{C}$
+                </section>
 
-                    <section class="definition">
-                        <b>Свойства операций над комплексными чиселами</b><br>
-                        $\forall{x,y,z}\in\mathbb{C}$:<br>
-                        <ol>
-                            <li>$x+y=y+x$</li>
-                            <li>$xy=yx$</li>
-                            <li>$(xy)z=x(yz)$</li>
-                        </ol>
-                    </section>
+                <br>
 
-                    <br>
+                <section class="definition">
+                    <b>Свойства операций над комплексными чиселами</b><br>
+                    $\forall{x,y,z}\in\mathbb{C}$:<br>
+                    <ol>
+                        <li>$x+y=y+x$</li>
+                        <li>$xy=yx$</li>
+                        <li>$(xy)z=x(yz)$</li>
+                    </ol>
+                </section>
 
-                    <section class="definition">
-                        <b>Мнимая единица:</b> $$i:=(0,1)$$
-                    </section>
-                    <section class="fact">
-                        $i^2=i\cdot{i}=(0,1)\cdot(0,1)=(0-1, 0+0)=(-1,0)\equiv{-1}$
-                    </section>
+                <br>
 
-                    <br>
+                <section class="definition">
+                    <b>Мнимая единица:</b> $$i:=(0,1)$$
+                </section>
+                <section class="fact">
+                    $i^2=i\cdot{i}=(0,1)\cdot(0,1)=(0-1, 0+0)=(-1,0)\equiv{-1}$
+                </section>
 
-                    <section class="definition">
-                        <b>Алгебраическая форма комплексного числа:</b>$$z=a+bi$$
-                    </section>
+                <br>
 
-                    <br>
+                <section class="definition">
+                    <b>Алгебраическая форма комплексного числа:</b>$$z=a+bi$$
+                </section>
 
-                    <section class="definition">
-                        <b>Модуль комплексного числа:</b> $$|z|:=\sqrt{a^2+b^2}$$
-                        Свойства:<br>
-                        <ol>
-                            <li>$|xy|=|x||y|$</li>
-                            <li>$|\frac{x}{y}|=\frac{|x|}{|y|}$</li>
-                        </ol>
-                    </section>
+                <br>
 
-                    <br>
+                <section class="definition">
+                    <b>Модуль комплексного числа:</b> $$|z|:=\sqrt{a^2+b^2}$$
+                    Свойства:<br>
+                    <ol>
+                        <li>$|xy|=|x||y|$</li>
+                        <li>$|\frac{x}{y}|=\frac{|x|}{|y|}$</li>
+                    </ol>
+                </section>
 
-                    <section class="definition">
-                        <b>Комплексно сопряженное число:</b> $$\forall{z}=a+bi \ \exists \bar{z}=a-bi$$
-                        Свойства:<br>
-                        <ol>
-                            <li>$\overline{x\pm{y}}=\bar{x}\pm\bar{y}$</li>
-                            <li>$\overline{xy}=\bar{x}\bar{y}$</li>
-                            <li>$\overline{\left(\frac{x}{y}\right)}=\frac{\bar{x}}{\bar{y}}$</li>
-                            <li>$z\bar{z}=|z|^2$</li>
-                        </ol>
-                    </section>
+                <br>
 
-                    
-                    <br>
+                <section class="definition">
+                    <b>Комплексно сопряженное число:</b> $$\forall{z}=a+bi \ \exists \bar{z}=a-bi$$
+                    Свойства:<br>
+                    <ol>
+                        <li>$\overline{x\pm{y}}=\bar{x}\pm\bar{y}$</li>
+                        <li>$\overline{xy}=\bar{x}\bar{y}$</li>
+                        <li>$\overline{\left(\frac{x}{y}\right)}=\frac{\bar{x}}{\bar{y}}$</li>
+                        <li>$z\bar{z}=|z|^2$</li>
+                    </ol>
+                </section>
 
-                    <section class="definition">
-                        <b>Деление комплексных чисел:</b><br>
-                        $$\boldsymbol{\frac{x}{y}}=\frac{x}{y}\cdot\frac{\bar{y}}{\bar{y}}=\frac{x\bar{y}}{y\bar{y}}=\boldsymbol{\frac{x\bar{y}}{|y|^2}}$$
-                    </section>
 
-                    <br>
-                    
-                    <section class="definition">
-                        <b>Тригонометрическая форма комплексного числа:</b> $$z=|z|(\cos\phi+i\sin\phi)$$
-                    </section>
-                    <img src="/images/complex_plane.png">
+                <br>
 
-                    <br>
-                    
-                    <section class="definition">
-                        <b>Формула Эйлера:</b> $$e^{i\phi}=(\cos\phi+i\sin\phi)$$
-                    </section>
-                    
-                    <br>
+                <section class="definition">
+                    <b>Деление комплексных чисел:</b><br>
+                    $$\boldsymbol{\frac{x}{y}}=\frac{x}{y}\cdot\frac{\bar{y}}{\bar{y}}=\frac{x\bar{y}}{y\bar{y}}=\boldsymbol{\frac{x\bar{y}}{|y|^2}}$$
+                </section>
 
-                    <section class="definition">
-                        <b>Показательная форма комплексного числа:</b> $$z=|z|(\cos\phi+i\sin\phi)=\boldsymbol{|z|e^{i\phi}}$$
-                    </section>
+                <br>
 
-                    <br>
-                    
-                    <section class="definition">
-                        <b>Умножение и деление комплексного числа в показательной форме:</b> 
-                        $$|x|e^{i\phi}\cdot{|y|e^{i\theta}}=|x||y|e^{i(\phi+\theta)}$$
-                        Т.е. модули умножаются, аргументы (углы) складываются.<br>
-                        $$\frac{|x|e^{i\phi}}{|y|e^{i\theta}}=\frac{|x|}{|y|}e^{i(\phi-\theta)}$$
-                        Т.е. модули делятся, аргументы (углы) вычитаются.
-                    </section>
-                    
-                    <br>
-                    
-                    <section class="definition">
-                        <b>Комплексные корни:</b> 
-                        $$
-                        \begin{aligned}
-                        & z=\sqrt[n]{a} \\
-                        & (|z|e^{i\theta})=\sqrt[n]{|a|e^{i\alpha}} \\
-                        & (|z|e^{i\theta})^n=|a|e^{i\alpha} \\
-                        & |z|^ne^{in\theta}=|a|e^{i\alpha} \implies \\
-                        & \implies
-                        \begin{cases}
-                        |z|^n=|a| \\
-                        n\theta = \alpha + 2\pi{k},\quad k\in\mathbb{Z}
-                        \end{cases}
-                        \implies \\
-                        & \implies
-                        \begin{cases}
-                        |z|=\sqrt[n]{|a|} \\
-                        \theta = \frac{\alpha}{n} + \frac{2\pi{k}}{n},\quad k=1,\cdots,(n-1)
-                        \end{cases}
-                        \end{aligned}
-                        $$
-                        Всего имеется $n$ комплексных корней.
-                    </section>
+                <section class="definition">
+                    <b>Тригонометрическая форма комплексного числа:</b> $$z=|z|(\cos\phi+i\sin\phi)$$
+                </section>
+                <img src="/images/complex_plane.png">
+
+                <br>
+
+                <section class="definition">
+                    <b>Формула Эйлера:</b> $$e^{i\phi}=(\cos\phi+i\sin\phi)$$
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Показательная форма комплексного числа:</b>
+                    $$z=|z|(\cos\phi+i\sin\phi)=\boldsymbol{|z|e^{i\phi}}$$
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Умножение и деление комплексного числа в показательной форме:</b>
+                    $$|x|e^{i\phi}\cdot{|y|e^{i\theta}}=|x||y|e^{i(\phi+\theta)}$$
+                    Т.е. модули умножаются, аргументы (углы) складываются.<br>
+                    $$\frac{|x|e^{i\phi}}{|y|e^{i\theta}}=\frac{|x|}{|y|}e^{i(\phi-\theta)}$$
+                    Т.е. модули делятся, аргументы (углы) вычитаются.
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Комплексные корни:</b>
+                    $$
+                    \begin{aligned}
+                    & z=\sqrt[n]{a} \\
+                    & (|z|e^{i\theta})=\sqrt[n]{|a|e^{i\alpha}} \\
+                    & (|z|e^{i\theta})^n=|a|e^{i\alpha} \\
+                    & |z|^ne^{in\theta}=|a|e^{i\alpha} \implies \\
+                    & \implies
+                    \begin{cases}
+                    |z|^n=|a| \\
+                    n\theta = \alpha + 2\pi{k},\quad k\in\mathbb{Z}
+                    \end{cases}
+                    \implies \\
+                    & \implies
+                    \begin{cases}
+                    |z|=\sqrt[n]{|a|} \\
+                    \theta = \frac{\alpha}{n} + \frac{2\pi{k}}{n},\quad k=1,\cdots,(n-1)
+                    \end{cases}
+                    \end{aligned}
+                    $$
+                    Всего имеется $n$ комплексных корней.
+                </section>
 
                 <!-- END CONTAINER -->
             </div>
