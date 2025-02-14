@@ -34,6 +34,38 @@
                     Получаем неравенство $0 \lt q^n \lt \frac{1}{na} \implies \lim_{n\to{\infty}}q^n=0$.<br>
                 </section>
  
+                <br>
+
+                <section class="definition" data-bs-toggle="collapse" data-bs-target="#sol1">
+                   Найти предел $\lim_{n\to\infty}\sqrt[n]{a}$ при $a\gt{0}$.
+                </section>
+                <section class="collapse proof" id="sol1">
+                    Рассмотрим случай $a\gt{1}$:<br>
+                    $$
+                    \begin{aligned}
+                    \sqrt[n]{a}\gt{1} &\implies \sqrt[n]{a}=1+\alpha, \alpha\gt{0} \\
+                    \sqrt[n]{a}&=1+\alpha \\
+                    a &= (1+\alpha)^n = \sum_{k=0}^nC_n^k\alpha^k \quad \text{(бином)} \\
+                    n\alpha &\lt (1+\alpha)^n \quad \text{(второй член бинома)} \\
+                    n\alpha &\lt a \\
+                    \alpha &\lt \frac{a}{n} \\
+                    \\
+                    0 \lt \alpha \lt \frac{a}{n} &\implies \alpha\to{0} \implies \sqrt[n]{a} \to{1}
+                    \end{aligned}
+                    $$
+
+                    Рассмотрим случай $0 \lt a \lt{1}$:<br>
+                    $$
+                    \begin{aligned}
+                    & b = \frac{1}{a} \implies b \gt 1 \\
+                    & \sqrt[n]{b} \to 1 \\
+                    & \sqrt[n]{\frac{1}{a}} \to 1 \\
+                    & \frac{1}{\sqrt[n]{a}} \to 1 \\
+                    & \sqrt[n]{a} \to 1
+                    \end{aligned}
+                    $$
+                </section>
+
                 <!-- END CONTAINER -->
             </div>
         </div>
