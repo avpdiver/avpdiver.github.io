@@ -1,0 +1,77 @@
+<head>
+    <title>Разложение на простейшие дроби</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <script src="/js/math.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link href="/css/math.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h3 class="text-center">Разложение на простейшие дроби</h3>
+    <div class="container" style="text-align: justify;">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- BEGIN CONTAINER -->
+
+                <section class="definition" data-bs-toggle="collapse" data-bs-target="#sol2">
+                    Дана последовательность: $$x_n=\sum_{k=1}^n\frac{1}{4k^2-1}$$
+                    1) Докажите, что $x_n$ ограничена<br>
+                    2) Найдите $\inf{x_n},\ \sup{x_n}$.
+                </section>
+                <section class="collapse proof" id="sol2">
+                    Т.к. $x_n$ - сумма положительных слагаемых, значит $x_n$ возврастающая последовательность.
+                    Поэтому $\inf{x_n}=\min{x_n}=x_1=\frac{1}{4\cdot1^2-1}=\frac{1}{3}$.
+                    <br><br>
+                    Разложим на простейшие дроби:
+                    $$\frac{1}{4k^2-1}=\frac{1}{(2k-1)(2k+1)}=\frac{1}{2}\left(\frac{1}{2k-1}-\frac{1}{2k+1}\right)$$
+                    Отсюда:
+                    $$x_n=\sum_{k=1}^n\frac{1}{4k^2-1}=\frac{1}{2}\sum_{k=1}^n\left(\frac{1}{2k-1}-\frac{1}{2k+1}\right)=\frac{1}{2}\left(\sum_{k=1}^n\frac{1}{2k-1}-\sum_{k=1}^n\frac{1}{2k+1}\right)$$
+                    Приведем первую сумму к виду $\frac{1}{2l+1}$, чтоб она соответствовала форме второй суммы.<br>
+                    Произведем замену переменной в первой сумме:
+                    $$
+                    \begin{aligned}
+                    & 2k-1=2l+1 \implies 2k=2l+2 \implies k=l+1\\
+                    & k=1 \implies l+1=1 \implies l=0 \quad (\text{первый индекс суммирования})\\
+                    & k=n \implies l+1=n \implies l=n-1 \quad (\text{последний индекс суммирования})\\
+                    \end{aligned}
+                    $$
+                    Подставим $k=l+1$ в первую сумму:
+                    $$\sum_{k=1}^n\frac{1}{2k-1}=\sum_{l=0}^{n-1}\frac{1}{2(l+1)-1}=\sum_{l=0}^{n-1}\frac{1}{2l+1}$$
+                    Имеем
+                    $$\sum_{l=0}^{n-1}\frac{1}{2l+1}-\sum_{k=1}^n\frac{1}{2k+1}$$
+                    Теперь приведем первые и последние индексы этих двух сумм. Для этого выделим из первой суммы первое слагаемое, из второй суммы последнее слагаемое:
+                    $$
+                    \begin{aligned}
+                    & \sum_{l=0}^{n-1}\frac{1}{2l+1}-\sum_{k=1}^n\frac{1}{2k+1} = \\
+                    & = \left(1 + \sum_{l=1}^{n-1}\left(\frac{1}{2l+1}\right)\right)-\left(\sum_{k=1}^{n-1}\left(\frac{1}{2k+1}\right)+\frac{1}{2n+1}\right) \\
+                    \end{aligned}
+                    $$
+                    Таким образом мы получили одинаковые суммы, которые сократятся при раскрытии скобок:
+                    $$
+                    \begin{aligned}
+                    & \left(1 + \sum_{l=1}^{n-1}\left(\frac{1}{2l+1}\right)\right)-\left(\sum_{k=1}^{n-1}\left(\frac{1}{2k+1}\right)+\frac{1}{2n+1}\right) = \\
+                    & = 1 + \sum_{l=1}^{n-1}\left(\frac{1}{2l+1}\right)-\sum_{k=1}^{n-1}\left(\frac{1}{2k+1}\right)-\frac{1}{2n+1} = \\
+                    & = 1 - \frac{1}{2n+1} = \frac{2n+1}{2n+1} - \frac{1}{2n+1} = \frac{2n}{2n+1}
+                    \end{aligned}
+                    $$
+                    Отсюда следует, что $\sup{x_n}=\sup\left(\frac{1}{2}\frac{2n}{2n+1}\right)=\sup\left(\frac{n}{2n+1}\right)=\frac{1}{2}$.
+                </section>
+
+                <!-- END CONTAINER -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
