@@ -72,6 +72,59 @@
                     $$a(x,w)=sign\left(\sum_{j=1}^nw_jf_j(x)\right) - \text{бинарная классификация}$$
                 </section>
 
+                <br>
+                <br>
+
+                <section class="definition">
+                    <b>Функция потерь</b> $\mathbb{L}(a, x)$ - величина ошибки алгоритма $a\in{A}$ на объекте $x\in{X}$.
+                </section>
+                <section class="example">
+                    <b>Функции потерь для задач классификации</b><br>
+                    $\mathbb{L}(a, x)=[a(x)\neq{y(x)}]$ - индикатор ошибки.
+                </section>
+                <section class="example">
+                    <b>Функции потерь для задач регрессии</b><br>
+                    $\mathbb{L}(a, x)=|a(x)-y(x)|$ - абсолютное значение ошибки.<br>
+                    $\mathbb{L}(a, x)=(a(x)-y(x))^2$ - квадратичная ошибка.
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Эмпирический риск</b> - функционал качества алгоритма $a$ на $X^l$:
+                    $$Q(a,X^l):=\frac{1}{l}\sum_{i=1}^l\mathbb{L}(a, x_i)$$
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Метод минимизации эмпирического риска</b> (Empirical Risk Minimization, ERM):
+                    $$\mu(X^l) = \arg\min_{a\in{A}}Q(a,X^l)$$
+                </section>
+                <section class="example">
+                    Задача регрессии:<br>
+                    $Y=\mathbb{R}$;<br>
+                    $n$ числовых признаков $f_j(x), j=1,\dots,n$;<br>
+                    линейная модель регресии $g(x,w)=\sum_{i=1}^n w_j f_j(x),\ w\in\mathbb{R}^n$;<br>
+                    квадратичная ф-ция потерь $\mathbb{L}(a,x)=(a(x)-y(x))^2$.<br>
+                    <i>Метод наименьших квадратов</i> (частный случай ERM):
+                    $$\mu(a,X^l):=\arg\min_w\sum_{i=1}^l(g(x_i,w)-y_i)^2$$
+                </section>
+                
+                <br>
+
+                <section class="example">
+                    <b>Эмпирический риск на тестовых данных</b> (hold-out):
+                    $$HO\left(\mu,X^l,X^k\right):=Q\left(\mu\left(X^l\right),X^k\right)\to\min $$
+
+                    <b>Скользящий контроль</b> (leave-one-out), $L=l+1$:
+                    $$LOO\left(\mu,X^L\right):=\frac{1}{L}\sum_{i=1}^L\mathbb{L}\left(\mu\left(X^L\setminus\{x_i\}\right), x_i\right)\to\min$$
+                    
+                    <b>Кросс-проверка</b> (cross validation), $L=l+k$:
+                    $$CV\left(\mu,X^L\right):=\frac{1}{|P|}\sum_{p\in{P}}Q\left(\mu\left(X_p^l\right), X_p^k\right)\to\min,$$
+                    где $P$ - множество разбиений $X^L=X_p^l\sqcup{X_p^k}$.
+                </section>
+
                 <!-- END CONTAINER -->
             </div>
         </div>
