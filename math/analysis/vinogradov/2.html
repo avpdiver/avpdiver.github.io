@@ -64,20 +64,57 @@
                     Следующие понятия естественным образом обобщают понятия шара и сферы в $\mathbb{R}^3$, круга и окружности в $\mathbb{R}^2$, 
                     интервала и отрезка в $\mathbb{R}$.
                 </p>
+
+                <br>
+
+                <p>Пусть $(X, \rho)$ - метрическое пространство, $a\in{X},r\gt0$.</p>
                 <section class="definition">
-                    <b>Предел последовательности</b><br>
+                    <b>Открытый шар (окрестность)</b><br>
                     <p>
-                        Число $a$ называется <b>пределом последовательности</b> ${a_n}$ (пишут $a=\lim_{n\to\infty}$ или $a_n\to\infty$ при $n\to\infty$), 
-                        $$\forall\epsilon\gt{0}\ \exists{N(\epsilon)}:\ \forall{n}\ge{N} \hookrightarrow a_n\in{U_{\epsilon}(a)},$$
-                        т.е.
-                        $$\forall\epsilon\gt{0}\ \exists{N(\epsilon)}:\ \forall{n}\ge{N} \hookrightarrow |a_n-a|\lt\epsilon$$
+                        Множество $$B(a,r)=\{x\in{X}:\rho(x,a)\lt{r}\}$$ называется <b>открытым шаром</b> радиуса $r$ с центром в точке $a$ 
+                        или <b>окрестностью ($r$-окрестностью)</b> точки $a$ и обозначается $V_a(r)$ или $V_a$, если значение $r$ несущественно.
+                    </p>
+                </section>
+                
+                <br>
+
+                <section class="definition">
+                    <b>Замкнутый шар</b><br>
+                    <p>
+                        Множество $$\bar{B}(a,r)=\{x\in{X}:\rho(x,a)\le{r}\}$$ называется <b>замкнутым шаром</b>.
+                    </p>
+                </section>
+                
+                <br>
+
+                <section class="definition">
+                    <b>Сфера</b><br>
+                    <p>
+                        Множество $$S(a,r)=\{x\in{X}:\rho(x,a)=r\}$$ называется <b>сферой</b>.
                     </p>
                 </section>
 
                 <br>
 
+                <section class="definition">
+                    <b>Предел последовательности</b><br>
+                    <p>
+                        Пусть $(X, \rho)$ - метрическое пространство, $\{x_n\}_{n=1}^{\infty}$ - последовательность в $X$. 
+                        Точка $a\in{X}$ называется <b>пределом последовательности</b> ${x_n}$ и пишут 
+                        $$\lim_{n\to\infty}x_n=a\ \text{или}\ \underset{n\to\infty}{x_n\to{a}},$$
+                        если для любого положительного числа $\epsilon$ существует такой номер $N$, что для всех номеров $n$, 
+                        больших $N$, выполняется неравенство $\rho(x_n,a)\lt\epsilon$: 
+                        $$\forall\epsilon\gt0\ \exists{N}\in\mathbb{N}:\ \forall{n}\in\mathbb{N},n\gt{N}\hookrightarrow\rho(x_n,a)\lt\epsilon.$$
+                    </p>
+                </section>
+                <section class="fact">
+                    Сходимость в метрическом пространстве $(X, \rho)$ называется еще сходимостью по метрике (расстоянию) $\rho$.
+                </section>
+
+                <br>
+
                 <section class="statement" data-bs-toggle="collapse" data-bs-target="#th2">
-                    <b>Теорема о единственности предела</b><br>
+                    <b>Теорема о единственности предела последовательности</b><br>
                     Последовательность не может иметь более одного предела из $\overline{\mathbb{R}}$.
                 </section>
                 <section id="th2" class="proof collapse">
