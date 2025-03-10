@@ -1,5 +1,5 @@
 <head>
-    <title>Последовательность действительных чисел</title>
+    <title>2. Последовательности в метрических пространствах</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,41 +17,53 @@
 </head>
 
 <body>
-    <h3 class="text-center">Последовательность действительных чисел</h3>
+    <h3 class="text-center">2. Последовательности в метрических пространствах</h3>
 
     <div class="container" style="text-align: justify;">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <!-- BEGIN CONTAINER -->
 
-                <section class="statement" data-bs-toggle="collapse" data-bs-target="#th1">
-                    <b>Теорема</b><br>
-                    Пусть множество $A\subset\mathbb{R}$ ограничено сверху (снизу).
-                    Тогда существует единственный $\sup{A}$ ($\inf{A}$).
-                </section>
-                <section id="th1" class="proof collapse">
-                    <b>Доказательство</b><br>
+                <br>
+
+                <section class="definition">
+                    <b>Метрика</b><br>
                     <p>
-                        Рассмотрим множество $B$ всех верхних граней $A$. Т.к. $A$ ограничено сверху, то
-                        $B\ne\emptyset$.
-                        Т.к. $A$ лежит левее $B$, то по аксиоме непрерывности $\exists{c}\in\mathbb{R}:\
-                        \forall{a}\in{A},\forall{b}\in{B} \hookrightarrow a\le{c}\le{b}$.
-                    </p>
-                    <p>
-                        Покажем, что $c=\sup{A}$. Т.к. $\forall{a}\in{A} \hookrightarrow a\le{c}$, то $c$ является
-                        верхней гранью $A$, т.е. $c\in{B}$.
-                        Поскольку $\forall{b}\in{B} \hookrightarrow c\le{b}$, то $c$ является минимальным элементом $B$.
-                        Итак, $c=\sup{A}$.
-                    </p>
-                    <p>
-                        Предположим, что $M_1,\ M_2$ - два различных $\sup{A}$. Тогда $M_1\in{B},\ M_2\in{B}$. Без
-                        потери общности, пусть $M_1\lt{M_2}$.
-                        Тогда $M_2$ не является минимальным элементом $B$. Противоречие.
+                        Функция $\rho:X\times{X}\to\mathbb{R}_+$  называется <b>метрикой (расстоянием)</b> в множестве $X$, 
+                        если она удовлетворяет следующим условиям:
+                        <ul>
+                            <li>$\rho(x,y)=0 \iff x=y,\ x,y\in{X}$</li>
+                            <li>$\rho(x,y)=\rho(y,x),\ x,y\in{X}$</li>
+                            <li>$\rho(x,z) \le \rho(x,y) + \rho(y,z),\ x,y,z\in{X}$</li>
+                        </ul>
                     </p>
                 </section>
 
                 <br>
 
+                <section class="definition">
+                    <b>Метрическое пространство</b><br>
+                    <p>
+                        Пара $(X, \rho)$ - множество с метрикой в нем - называется <b>метрическим пространством</b>.
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Подпространство метрического пространства</b><br>
+                    <p>
+                        Пусть $(X, \rho)$ - метрическое пространство и $Y\subset{X}$, тогда метрическое пространство $(Y, \rho|_{Y\times{Y}})$ - 
+                        называется <b>подпространством</b> метрического пространства $(X, \rho)$.
+                    </p>
+                </section>
+
+                <br>
+
+                <p>
+                    Следующие понятия естественным образом обобщают понятия шара и сферы в $\mathbb{R}^3$, круга и окружности в $\mathbb{R}^2$, 
+                    интервала и отрезка в $\mathbb{R}$.
+                </p>
                 <section class="definition">
                     <b>Предел последовательности</b><br>
                     <p>
