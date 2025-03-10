@@ -115,16 +115,35 @@
 
                 <section class="statement" data-bs-toggle="collapse" data-bs-target="#th2">
                     <b>Теорема о единственности предела последовательности</b><br>
-                    Последовательность не может иметь более одного предела из $\overline{\mathbb{R}}$.
+                    Последовательность в метрическом пространстве не может иметь более одного предела: если $x_n\to{a},\ x_n\to{b}\implies a=b$.
                 </section>
                 <section id="th2" class="proof collapse">
                     <b>Доказательство</b><br>
                     <p>
-                        Предположим противное: пусть последовательность ${a_n}$ имеет два предела $a,b\in\overline{\mathbb{R}},\ a\ne{b}$. 
-                        Выберем $\epsilon\gt{0}$ так, чтобы $U_{\epsilon}(a) \cap U_{\epsilon}(b) = \emptyset$. 
-                        По определению предела $\exists{N_1}:\ \forall{n}\ge{N_1} \hookrightarrow a_n \in U_{\epsilon}(a)$ и 
-                        $\exists{N_2}:\ \forall{n}\ge{N_2} \hookrightarrow a_n \in U_{\epsilon}(b)$. При $N\ge\max\{N_1, N_2\}$ получаем 
-                        $a_n \in U_{\epsilon}(a) \cap U_{\epsilon}(b)$. Противоречие.
+                        Предположим противное: пусть $a\neq{b}$. Тогда по первой аксиоме $\rho(a,b)\gt0$. Возьмем $\epsilon=\frac{\rho(a,b)}{2}$. 
+                        По определению предела найдутся такие $N_1,N_2$, что $\rho(x_n,a)\lt\epsilon\ \forall{n}\gt{N_1}$ и $\rho(x_n,b)\lt\epsilon\ \forall{n}\gt{N_2}$.
+                        Тогда если $n\gt\max\{N_1, N_2\}$, то по аксиоме расстояния
+                        $$\rho(a,b) \leq \rho(x_n,a)+\rho(x_n,b) \lt \epsilon + \epsilon = \rho(a,b),$$ что абсурдно.
+                    </p>
+                </section>
+                
+                <br>
+
+                <section class="definition">
+                    <b>Ограниченное множество</b><br>
+                    <p>
+                        Подмножество $D$ метрического пространства $X$ называется <b>ограниченным</b>, если оно содержится в некотором шаре:
+                        $$\exists{a}\in{X}, R\gt0:\ D \subset \bar{B}(a,R).$$
+                    </p>
+                </section>
+                
+                <br>
+
+                <section class="definition">
+                    <b>Ограниченная последовательность</b><br>
+                    <p>
+                        Последовательность $\{x_n\}$ в метрическом пространстве $X$ называется <b>ограниченной</b>, если множество ее значений ограничено:
+                        $$\exists{a}\in{X}, R\gt0:\ \forall{n}\in\mathbb{N} \hookrightarrow \rho(x_n, a) \leq R.$$
                     </p>
                 </section>
 
@@ -137,15 +156,8 @@
                 <section id="th3" class="proof collapse">
                     <b>Доказательство</b><br>
                     <p>
-                        Пусть последовательность $a=\lim_{n\to\infty}{a_n}$. Возьмем $\epsilon=1$. 
-                        По определению предела $\exists{N}:\ \forall{n} \ge N \hookrightarrow a_n \in U_1(a)$, т.е.
-                        $$-(|a|+1) \le a-1 \lt a_n \lt a+1 \le |a|+1$$
-                        $$|a_n| \le ||a|+1|$$
-                        $$|a_n| \le |a|+1$$
-                    </p>
-                    <p>
-                        Определим $M=\max\{|a_1|,\dots,|a_{N-1}|, |a|+1\}$. Тогда $\forall{n} \hookrightarrow |a_n| \le M$, 
-                        т.е. последовательность $a_n$ ограничена.
+                        Пусть $x_n\to{a}$. Взяв $\epsilon=1$, подберем такой номер $N$, что для всех $n\gt{N}$ будет $\rho(x_n,a)\lt1$. 
+                        Положим $$R = \max\{\rho(x_1,a),\rho(x_2,a),\dots,\rho(x_N,a), 1\},$$ тогда $\rho(x_n,a)\leq{R}$ для всех $n\in\mathbb{N}$.
                     </p>
                 </section>
 
