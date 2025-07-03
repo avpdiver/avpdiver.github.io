@@ -116,6 +116,50 @@
                 </section>
 
                 <br>
+
+                <section class="definition">
+                    <b>Максимум множества</b><br>
+                    <p>
+                        Число $M$ называется максимумом мн-ва $E\subset\mathbb{R}$,
+                        если $M\in{E} \land x\leq{M}\ \forall{x}\in{E}$.
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Минимум множества</b><br>
+                    <p>
+                        Число $m$ называется минимумом мн-ва $E\subset\mathbb{R}$,
+                        если $m\in{E} \land m\leq{x}\ \forall{x}\in{E}$.
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="statement" data-bs-toggle="collapse" data-bs-target="#th1_3">
+                    <b>Плотность множества рациональных чисел</b><br>
+                    Во всяком интервале есть рациональное число.
+                </section>
+                <section id="th1_3" class="proof collapse">
+                    <b>Доказательство</b><br>
+                    <p>
+                        Пусть $a,b\in\mathbb{R}, a\le{b}$. 
+                        Тогда $\frac{1}{b-a}\gt{0}$, и по аксиоме Архимеда найдется такое $n\in\mathbb{N}$,
+                        что $n\gt\frac{1}{b-a}$, т.е. $\frac{1}{n}\le{b-a}$. Положим $c=\frac{[na]+1}{n}$. 
+                        Тогда $c\in\mathbb{Q}$ и
+                        $$
+                        \begin{align}
+                        &c \leq \frac{na+1}{n} = a + \frac{1}{n} \le a+(b-a) = b,\\
+                        &c \gt \frac{na-1+1}{n} = a
+                        \end{align}
+                        $$
+                        т.е. $c\in(a,b)$.
+                    </p>
+                </section>
+
+                <br>
+
                 <!-- END CONTAINER -->
             </div>
         </div>
