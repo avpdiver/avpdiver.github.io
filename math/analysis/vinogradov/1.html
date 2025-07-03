@@ -1,0 +1,126 @@
+<head>
+    <title>1. Вещественные числа</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <script src="/js/math.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link href="/css/math.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h3 class="text-center">1. Вещественные числа</h3>
+
+    <div class="container" style="text-align: justify;">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- BEGIN CONTAINER -->
+
+                <br>
+
+                <section class="definition">
+                    <b>Аксиомы поля</b><br>
+                    <p>
+                        В мн-ве $\mathbb{R}$ определены две операции, называемые
+                        сложением и умножением, действующие из $\mathbb{R}\times\mathbb{R}$ в $\mathbb{R}$ 
+                        и удовлетворяющие следующим свойствам:                        
+                        <ol>
+                            <li>Ассоциативность: $(x+y)+z=x+(y+z);\quad (xy)z=x(yz)$</li>
+                            <li>Коммутативность: $x+y=y+x;\quad xy=yx$</li>
+                            <li>Существует нейтральный элемент: $x+0=x;\quad x\cdot{1}=x$</li>
+                            <li>Существует обратный элемент: $x+(-x)=0;\quad xx^{-1}=1 (x\neq{0})$</li>
+                            <li>Дистрибутивность: $x(y+z)=xy+xz$</li>
+                        </ol>
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Аксиомы порядка</b><br>
+                    <p>
+                        Междку элементами $\mathbb{R}$ определено отношение $\leq$ 
+                        со следующими свойствами:
+                        <ol>
+                            <li>$\forall{x,y} \hookrightarrow x\leq{y} \lor y\leq{x}$</li>
+                            <li>Транзитивность: $x\leq{y} \land y\leq{z} \implies x\leq{z}$</li>
+                            <li>Антисимметричность: $x\leq{y} \land y\leq{x} \implies x=y$</li>
+                            <li>$x\leq{y} \implies x+z\leq{y+z}\quad\forall{z}$</li>
+                            <li>$0\leq{x} \land 0\leq{y} \implies 0\leq{xy}$</li>
+                        </ol>
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Аксиома Архимеда</b><br>
+                    <p>
+                        Каковы бы ни были положительные числа $x,y\in\mathbb{R}$,
+                        существует такое натуральное число $n$, что $nx\gt{y}$.
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Аксиома Кантора о вложенных отрезках (аксиома полноты)</b><br>
+                    <p>
+                        Пусть $\{[a_n,b_n]\}_{n=1}^{\infty}$ - последовательность вложенных отрезков, т.е.
+                        $$a_n \leq a_{n+1} \leq b_{n+1} \leq b_n \quad \forall{n}\in\mathbb{N}.$$
+                        Тогда существует точка, принадлежащая одновременно всем отрезкам $[a_n, b_n]$, т.е.
+                        $$\cap_{n=1}^{\infty}[a_n,b_n]\neq\emptyset.$$
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Ограниченное сверху множество</b><br>
+                    <p>
+                        Мн-во $E\subset\mathbb{R}$ называется ограниченным сверху, 
+                        если существует такое число $M\in\mathbb{R}$, что $x\leq{M}$
+                        для всех $x\in{E}$. 
+                        Число $M$ при это называется верхней гранью мн-ва $E$.
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Ограниченное снизу множество</b><br>
+                    <p>
+                        Мн-во $E\subset\mathbb{R}$ называется ограниченным снизу, 
+                        если существует такое число $m\in\mathbb{R}$, что $m\leq{x}$
+                        для всех $x\in{E}$. 
+                        Число $m$ при это называется нижней гранью мн-ва $E$.
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>Ограниченное множество</b><br>
+                    <p>
+                        Мн-во $E\subset\mathbb{R}$ называется ограниченным,
+                        если оно ограничено и сверху, и снизу.
+                    </p>
+                </section>
+
+                <br>
+                <!-- END CONTAINER -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
