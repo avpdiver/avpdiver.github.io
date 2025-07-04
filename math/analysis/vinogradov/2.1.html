@@ -27,9 +27,34 @@
                 <br>
 
                 <section class="definition">
+                    <b>Предел последовательности</b><br>
+                    <p>
+                        Пусть $\{x_n\}_{n=1}^{\infty}$ - последовательность вещественных чисел.
+                        Число $a\in\mathbb{R}$ называется пределом последовательности $\{x_n\}$ и пишут:
+                        $$\lim_{n\to\infty}x_n=a\ \text{или}\ x_n\underset{n\to\infty}{\longrightarrow}a,$$
+                        если для любого положительного числа $\epsilon$ существует такой номер $N$, 
+                        что для всех номеров $n$, больших $N$, выполняется неравенство $|x_n-a|\lt\epsilon$:
+                        $$\forall\epsilon\gt{0}\ \exists{N}\in\mathbb{N}: \forall{n}\in\mathbb{N}, n\gt{N}\hookrightarrow |x_n-a|\lt\epsilon$$
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
+                    <b>$\epsilon$-окрестность точки</b><br>
+                    <p>
+                        Интервал $(a-\epsilon, a+\epsilon)$ называется $\epsilon$-окрестностью
+                        точки $a$ и обозначается $V_a(\epsilon)$ или $V_a$, 
+                        если значение $\epsilon$ несущественно.
+                    </p>
+                </section>
+
+                <br>
+
+                <section class="definition">
                     <b>Метрика</b><br>
                     <p>
-                        Функция $\rho:X\times{X}\to\mathbb{R}_+$  называется <b>метрикой (расстоянием)</b> в множестве $X$, 
+                        Функция $\rho:X\times{X}\to\mathbb{R}_+$ называется метрикой (расстоянием) в множестве $X$, 
                         если она удовлетворяет следующим условиям:
                         <ul>
                             <li>$\rho(x,y)=0 \iff x=y,\ x,y\in{X}$</li>
@@ -44,136 +69,7 @@
                 <section class="definition">
                     <b>Метрическое пространство</b><br>
                     <p>
-                        Пара $(X, \rho)$ - множество с метрикой в нем - называется <b>метрическим пространством</b>.
-                    </p>
-                </section>
-
-                <br>
-
-                <section class="definition">
-                    <b>Подпространство метрического пространства</b><br>
-                    <p>
-                        Пусть $(X, \rho)$ - метрическое пространство и $Y\subset{X}$, тогда метрическое пространство $(Y, \rho|_{Y\times{Y}})$ - 
-                        называется <b>подпространством</b> метрического пространства $(X, \rho)$.
-                    </p>
-                </section>
-
-                <br>
-
-                <p>
-                    Следующие понятия естественным образом обобщают понятия шара и сферы в $\mathbb{R}^3$, круга и окружности в $\mathbb{R}^2$, 
-                    интервала и отрезка в $\mathbb{R}$.
-                </p>
-
-                <br>
-
-                <p>Пусть $(X, \rho)$ - метрическое пространство, $a\in{X},r\gt0$.</p>
-                <section class="definition">
-                    <b>Открытый шар (окрестность)</b><br>
-                    <p>
-                        Множество $$B(a,r)=\{x\in{X}:\rho(x,a)\lt{r}\}$$ называется <b>открытым шаром</b> радиуса $r$ с центром в точке $a$ 
-                        или <b>окрестностью ($r$-окрестностью)</b> точки $a$ и обозначается $V_a(r)$ или $V_a$, если значение $r$ несущественно.
-                    </p>
-                </section>
-
-                <br>
-
-                <section class="definition">
-                    <b>Замкнутый шар</b><br>
-                    <p>
-                        Множество $$\bar{B}(a,r)=\{x\in{X}:\rho(x,a)\le{r}\}$$ называется <b>замкнутым шаром</b>.
-                    </p>
-                </section>
-
-                <br>
-
-                <section class="definition">
-                    <b>Сфера</b><br>
-                    <p>
-                        Множество $$S(a,r)=\{x\in{X}:\rho(x,a)=r\}$$ называется <b>сферой</b>.
-                    </p>
-                </section>
-
-                <br>
-
-                <section class="definition">
-                    <b>Предел последовательности</b><br>
-                    <p>
-                        Пусть $(X, \rho)$ - метрическое пространство, $\{x_n\}_{n=1}^{\infty}$ - последовательность в $X$. 
-                        Точка $a\in{X}$ называется <b>пределом последовательности</b> ${x_n}$ и пишут 
-                        $$\lim_{n\to\infty}x_n=a\ \text{или}\ \underset{n\to\infty}{x_n\to{a}},$$
-                        если для любого положительного числа $\epsilon$ существует такой номер $N$, что для всех номеров $n$, 
-                        больших $N$, выполняется неравенство $\rho(x_n,a)\lt\epsilon$: 
-                        $$\forall\epsilon\gt0\ \exists{N}\in\mathbb{N}:\ \forall{n}\in\mathbb{N},n\gt{N}\hookrightarrow\rho(x_n,a)\lt\epsilon.$$
-                    </p>
-                </section>
-                <section class="fact">
-                    Сходимость в метрическом пространстве $(X, \rho)$ называется еще сходимостью по метрике (расстоянию) $\rho$.
-                </section>
-
-                <br>
-
-                <section class="statement" data-bs-toggle="collapse" data-bs-target="#th1">
-                    <b>Теорема о единственности предела последовательности</b><br>
-                    Последовательность в метрическом пространстве не может иметь более одного предела: если $x_n\to{a},\ x_n\to{b}\implies a=b$.
-                </section>
-                <section id="th1" class="proof collapse">
-                    <b>Доказательство</b><br>
-                    <p>
-                        Предположим противное: пусть $a\neq{b}$. Тогда по первой аксиоме $\rho(a,b)\gt0$. Возьмем $\epsilon=\frac{\rho(a,b)}{2}$. 
-                        По определению предела найдутся такие $N_1,N_2$, что $\rho(x_n,a)\lt\epsilon\ \forall{n}\gt{N_1}$ и $\rho(x_n,b)\lt\epsilon\ \forall{n}\gt{N_2}$.
-                        Тогда если $n\gt\max\{N_1, N_2\}$, то по аксиоме расстояния
-                        $$\rho(a,b) \leq \rho(x_n,a)+\rho(x_n,b) \lt \epsilon + \epsilon = \rho(a,b),$$ что абсурдно.
-                    </p>
-                </section>
-
-                <br>
-
-                <section class="definition">
-                    <b>Ограниченное множество</b><br>
-                    <p>
-                        Подмножество $D$ метрического пространства $X$ называется <b>ограниченным</b>, если оно содержится в некотором шаре:
-                        $$\exists{a}\in{X}, R\gt0:\ D \subset \bar{B}(a,R).$$
-                    </p>
-                </section>
-
-                <br>
-
-                <section class="definition">
-                    <b>Ограниченная последовательность</b><br>
-                    <p>
-                        Последовательность $\{x_n\}$ в метрическом пространстве $X$ называется <b>ограниченной</b>, если множество ее значений ограничено:
-                        $$\exists{a}\in{X}, R\gt0:\ \forall{n}\in\mathbb{N} \hookrightarrow \rho(x_n, a) \leq R.$$
-                    </p>
-                </section>
-
-                <br>
-
-                <section class="statement" data-bs-toggle="collapse" data-bs-target="#th2">
-                    <b>Теорема</b><br>
-                    Сходящаяся последовательность ограничена.
-                </section>
-                <section id="th2" class="proof collapse">
-                    <b>Доказательство</b><br>
-                    <p>
-                        Пусть $x_n\to{a}$. Взяв $\epsilon=1$, подберем такой номер $N$, что для всех $n\gt{N}$ будет $\rho(x_n,a)\lt1$. 
-                        Положим $$R = \max\{\rho(x_1,a),\rho(x_2,a),\dots,\rho(x_N,a), 1\},$$ тогда $\rho(x_n,a)\leq{R}$ для всех $n\in\mathbb{N}$.
-                    </p>
-                </section>
-
-                <br>
-
-                <section class="statement" data-bs-toggle="collapse" data-bs-target="#th3">
-                    <b>Теорема. Предельный переход в неравенстве.</b><br>
-                    Пусть $\{x_n\},\{y_n\}$ - <b>вещественные</b> последовательности, $x_n\leq{y_n}\ \forall{n}\in\mathbb{N},\ a,b\in\mathbb{R},x_n\to{a},y_n\to{b}$. 
-                    Тогда $a\leq{b}$.
-                </section>
-                <section id="th3" class="proof collapse">
-                    <b>Доказательство</b><br>
-                    <p>
-                        Предположим противное: пусть $a\gt{b}$. Тогда $\epsilon=\frac{a-b}{2}$ положительно. По определению предела найдутся такие $N_1, N_2$, 
-                        что $a-\epsilon \lt x_n$ для всех $n \gt N_1$, а $y_n \lt b + \epsilon$ для всех $n \gt N_2$. Значит, если $n \gt \max{N_1, N_2}$, то 
-                        $$y_n \lt b + \epsilon = \frac{a+b}{2} = a - \epsilon \lt x_n,$$ что противоречит условию.
+                        Пара $(X, \rho)$ - множество с метрикой в нем - называется метрическим пространством.
                     </p>
                 </section>
 
