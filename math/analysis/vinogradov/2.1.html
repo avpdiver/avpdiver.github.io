@@ -306,7 +306,7 @@
                             <li>Положительная однородность: $p(\lambda{x})=|\lambda|p(x)$</li>
                             <li>Неравенство треугольника (полуаддитивность): $p(x+y)\leq{p(x)+p(y)}$</li>
                         </ol>
-                        Принятое обозначенте нормы: $p(x)=||x||$.
+                        Принятое обозначенте нормы: $p(x)=\Vert{x}\Vert$.
                     </p>
                 </section>
                 <section class="fact">
@@ -328,7 +328,7 @@
                 <section class="definition">
                     <b>Нормированное векторное пространство</b><br>
                     <p>
-                        Пара $(X, ||\cdot||)$ - называется нормированным пространством.
+                        Пара $(X, \Vert\cdot\Vert)$ - называется нормированным пространством.
                     </p>
                 </section>
 
@@ -361,13 +361,13 @@
                 </section>
                 <section class="example">
                     Евклидова норма в $\mathbb{R}^m$ (длина вектора):
-                    $$||x|| = \sqrt{\sum_{k=1}^mx_k^2}.$$
+                    $$\Vert{x}\Vert = \sqrt{\sum_{k=1}^mx_k^2}.$$
                     
                     Евклидова норма в $\mathbb{C}^m$:
-                    $$||z|| = \sqrt{\sum_{k=1}^m|z_k|^2}.$$
+                    $$\Vert{z}\Vert = \sqrt{\sum_{k=1}^m|z_k|^2}.$$
                 </section>
                 <section class="fact">
-                    Если $\left(X, ||\cdot||\right)$ - нормированное пространство и $\rho(x,y)=||x-y||$, 
+                    Если $\left(X, \Vert\cdot\Vert\right)$ - нормированное пространство и $\rho(x,y)=\Vert{x-y}\Vert$, 
                     то $\rho$ - метрика в $X$ (выполнение аксиом очевидно). 
                     В этом случае говорят, что <i>метрика $\rho$ порождена нормой</i>.
                 </section>
@@ -377,18 +377,18 @@
                 <section class="definition">
                     <b>Предел последовательности в нормированном пространства</b><br>
                     <p>
-                        Пусть $(X, ||\cdot||)$ - нормированное пространство, 
+                        Пусть $(X, \Vert\cdot\Vert)$ - нормированное пространство, 
                         $\{x_n\}_{n=1}^{\infty}$ - последовательность в $X$. 
                         Точка $a\in{X}$ называется <b>пределом последовательности</b> ${x_n}$ и пишут 
                         $$\lim_{n\to\infty}x_n=a\ \text{или}\ \underset{n\to\infty}{x_n\longrightarrow{a}},$$
                         если для любого положительного числа $\epsilon$ существует такой номер $N$, что для всех номеров $n$, 
-                        больших $N$, выполняется неравенство $||x_n - a||\lt\epsilon$: 
-                        $$\forall\epsilon\gt0\ \exists{N}\in\mathbb{N}:\ \forall{n}\in\mathbb{N},n\gt{N}\hookrightarrow||x_n-||\lt\epsilon.$$
+                        больших $N$, выполняется неравенство $\Vert{x_n - a}\Vert\lt\epsilon$: 
+                        $$\forall\epsilon\gt0\ \exists{N}\in\mathbb{N}:\ \forall{n}\in\mathbb{N},n\gt{N}\hookrightarrow\Vert{x_n-a}\Vert\lt\epsilon.$$
                         
                     </p>
                 </section>
                 <section class="fact">
-                    Сходимость в нормированном пространстве $(X, ||\cdot||)$ 
+                    Сходимость в нормированном пространстве $(X, \Vert\cdot\Vert)$ 
                     называется сходимостью по норме (метрике, порожденной нормой).
                 </section>
                 
@@ -399,16 +399,79 @@
                     <p>
                         Подмножество $D$ нормированного пространства $X$ называется ограниченным, 
                         если:
-                        $$\exists{R}\gt{0}: \forall{x}\in{D} \hookrightarrow ||x||\leq{R}.$$
+                        $$\exists{R}\gt{0}: \forall{x}\in{D} \hookrightarrow \Vert{x}\Vert\leq{R}.$$
                     </p>
                 </section>
                 <section class="fact">
-                    Если метрика порождена нормой, то $||x||=\rho(x,\theta)$.
+                    Если метрика порождена нормой, то $\Vert{x}\Vert=\rho(x,\theta)$.
                     Однако метрика может не порождаться нормой по следующим причинам.
                     Во-первых, метрическое пространство может не быть векторным 
                     (никакие алгебраические операции с точками метрического пространства не определены).
                     Во-вторых, даже если метрическое пространство является векторным, $\rho(x,\theta)$ может не быть нормой.
                     Пример: $\rho(x,y)=\frac{|x-y|}{1+|x-y|}$ - метрика в $\mathbb{R}$, но $\rho(x,0)$ - не норма.
+                </section>
+                
+                <br>
+
+                <section class="statement" data-bs-toggle="collapse" data-bs-target="#th2_5">
+                    <b>Теорема 2.5. Арифметические действия над сходящимися последовательностями в нормированном пространстве.</b><br>                
+                        Пусть $(X, \Vert\cdot\Vert)$  - нормированное пространство, 
+                        $\{x_n\},\{y_n\}$ - последовательности в $X$, 
+                        $\{\lambda_n\}$ - числовая последовательность, 
+                        $x_0,y_0\in{X}, \lambda_0\in\mathbb{R}\ (\text{или}\ \mathbb{C}), x_n\to{x_0},y_n\to{y_0},\lambda_n\to{\lambda_0}$.
+                        Тогда
+                        <ol>
+                            <li>$x_n+y_n\to{x_0+y_0}$;</li>
+                            <li>$\lambda_nx_n\to{\lambda_0x_0}$;</li>
+                            <li>$x_n-y_n\to{x_0-y_0}$;</li>
+                            <li>$\Vert{x_n}\Vert\to\Vert{x_0}\Vert$.</li>
+                            <li>если $\lambda_n\neq0\ \forall{n}$ и $\lambda_0\neq0$, то $\frac{x_n}{\lambda_n}\to\frac{x_0}{\lambda_0}$.</li>
+                        </ol>
+                </section>
+                <section id="th2_5" class="proof collapse">
+                    <b>Доказательство</b><br>
+                    <p>
+                        <ol>
+                            <li>
+                                Возьмем $\epsilon\gt0$. По определению предела найдутся такие номера 
+                                $N_1, N_2$, что $\Vert{x_n-x_0}\Vert\lt\frac{\epsilon}{2},\ \forall{n}\gt{N_1}$, 
+                                а $\Vert{y_n-y_0}\Vert\lt\frac{\epsilon}{2},\ \forall{n}\gt{N_2}$. 
+                                Положим $N=\max\{N_1, N_2\}$. Тогда при всех $n\gt{N}$ будет
+                                $$\Vert(x_n+y_n)-(x_0+y_0)\Vert\leq\Vert{x_n-x_0}+\Vert{y_n-y_0}\Vert\lt\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.$$
+                            </li>
+                            <li>
+                                По неравенству треугольника
+                                $$\Vert\lambda_nx_n-\lambda_0x_0\Vert = \Vert(\lambda_n-\lambda_0)x_n + \lambda_0(x_n-x_0)\Vert \leq |\lambda_n-\lambda_0| \Vert{x_n}\Vert + |\lambda_0| \Vert{x_n-x_0}\Vert.$$
+                                По условию последовательности $\{|\lambda_n-\lambda_0|\},\ \{\Vert{x_n-x_0}\Vert\}$ бесконечно малые, 
+                                а по Теореме 2.2. последовательность $\{\Vert{x_n}\Vert\}$ ограничена.
+                                Следовательно, по Лемме 2.1. оба слагаемых в правой части бесконечно малые и их сумма также бесконечно малая.
+                            </li>
+                            <li>
+                                Применим доказанные пункты 1 и 2:
+                                $$x_n-y_n=x_n+(-1)y_n\to{x_0+(-1)y_0}=x_0-y_0.$$
+                            </li>
+                            <li>
+                                По 4 свойству нормы и по определению предела последовательности 
+                                $\forall\epsilon\gt0,\ \exists{N}: \forall{n}\gt{N}\hookrightarrow\Vert{x_n - x_0}\Vert\lt\epsilon$
+                                $$|\Vert{x_n}\Vert - \Vert{x_0}\Vert|\leq\Vert{x_n-x_0}\Vert\lt\epsilon.$$
+                            </li>
+                            <li>
+                                Достаточно доказать, что $\frac{1}{\lambda_n}\to\frac{1}{\lambda_0}$, 
+                                т.к. тогда по утверждению 2 получим
+                                $$\frac{x_n}{\lambda_n}=x_n\frac{1}{\lambda_n}\to{x_0\frac{1}{\lambda_0}}=\frac{x_0}{\lambda_0}.$$
+                                Поскольку
+                                $$\frac{1}{\lambda_n}-\frac{1}{\lambda_0}=(\lambda_n-\lambda_0)\frac{1}{\lambda_0}\frac{1}{\lambda_n},$$
+                                последовательность $\{\lambda_n-\lambda_0\}$ - бесконечно малая, $\frac{1}{\lambda_0}$ - постоянная величина.
+                                Остается доказать ограниченность последовательности $\{\frac{1}{\lambda_n}\}$.<br>
+                                По определению предела для числа $\epsilon=\frac{|\lambda_0|}{2}$ существует такой номер $N$, 
+                                что $|\lambda_n-\lambda_0|\lt\epsilon\ \forall{n}\gt{N}$. Тогда по свойствам модуля
+                                $$|\lambda_n|=|\lambda_0+\lambda_n-\lambda_0|\geq|\lambda_0|-|\lambda_n-\lambda_0|\gt|\lambda_0|-\epsilon=\frac{|\lambda_0|}{2}.$$
+                                Обозначим $k=\min\{|\lambda_1|,\dots,|\lambda_n|,\frac{|\lambda_0|}{2}\}$. Тогда $k\gt0,\ |\lambda_n|\geq{k}\ \forall{n}$. 
+                                Следовательно, $|\frac{1}{\lambda_0}|\leq\frac{1}{k}\ \forall{n}$, 
+                                что и означает ограниченность последовательности $\{\frac{1}{\lambda_n}\}$.
+                            </li>
+                        </ol>  
+                    </p>
                 </section>
 
                 <!-- END CONTAINER -->
