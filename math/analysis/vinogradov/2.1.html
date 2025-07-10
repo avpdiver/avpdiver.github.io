@@ -21,7 +21,7 @@
 
     <div class="container" style="text-align: justify;">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-8">
                 <!-- BEGIN CONTAINER -->
 
                 <br>
@@ -144,7 +144,7 @@
                         если для любого положительного числа $\epsilon$ существует такой номер $N$, что для всех номеров $n$, 
                         больших $N$, выполняется неравенство $\rho(x_n,a)\lt\epsilon$: 
                         $$\forall\epsilon\gt0\ \exists{N}\in\mathbb{N}:\ \forall{n}\in\mathbb{N},n\gt{N}\hookrightarrow\rho(x_n,a)\lt\epsilon.$$
-                        $$(\forall{V_a}\ \exists{N}\in\mathbb{N}:\ \forall{n}\in\mathbb{N},n\gt{N}\hookrightarrow{x_n\in{V_a}})$$
+                        $$(\forall{V_a}\ \exists{N}\in\mathbb{N}:\ \forall{n}\in\mathbb{N},n\gt{N}\hookrightarrow{x_n\in{B(a, \epsilon)}})$$
                     </p>
                 </section>
                 <section class="fact">
@@ -472,6 +472,51 @@
                             </li>
                         </ol>  
                     </p>
+                </section>
+                
+                <br>
+
+                <section class="definition">
+                    <b>Скалярное произведение</b><br>
+                    <p>
+                        Пусть $X$ - векторное пространство над $\mathbb{R}$ или $\mathbb{C}$.
+                        Функция $\phi:X\times{X}\to\mathbb{R}$ (или $\mathbb{C}$) называется 
+                        скалярным произведением в $X$ (обозначение: $\phi(x,y)=\langle{x,y}\rangle$), если она 
+                        удовлетворяет аксиомам скалярного произведения:
+                        <ol>
+                            <li>
+                                Линейность по первому аргументу: для всех $x_1,x_2,y\in{X},\lambda,\mu\in\mathbb{R}$ (или $\mathbb{C}$)
+                                $$\langle{\lambda{x_1}+\mu{x_2},y}\rangle=\lambda\cdot\langle{x_1,y}\rangle+\mu\cdot\langle{x_2,y}\rangle.$$
+                            </li>
+                            <li>
+                                Эрмитовская симметричность: $$\langle{y,x}\rangle=\overline{\langle{x,y}\rangle}.$$
+                            </li>
+                            <li>
+                                Положительная определенность: $$\langle{x,x}\rangle\geq0;\ \langle{x,x}\rangle=0 \Longleftrightarrow x=\theta.$$
+                            </li>
+                        </ol>
+                    </p>
+                </section>
+                <section class="fact">
+                    В вещественном случае скалярное произведение линейно по второму аргументу. 
+                    В комплексном случае скалярное произведение сопряжённо-линейно по второму аргументу 
+                    для сохранения третьей аксиомы (положительная определённость). Пример в $\mathbb{C}^m$:
+                    $$\langle{x,y}\rangle=\sum_{i=1}^mx_i\overline{y_i}.$$
+                    Проверим линейность по первому аргументу:
+                    $$
+                    \begin{align}
+                    &\langle{ax+by,z}\rangle=\sum_{i=1}^m(ax_i+by_i)\overline{z_i}=\\
+                    &=a\sum_{i=1}^mx_i\overline{z_i}+b\sum_{i=1}^my_i\overline{z_i}=\\
+                    &=a\langle{x,z}\rangle+b\langle{y,z}\rangle.
+                    \end{align}$$
+                    Проверим нелинейность (сопряжённо-линейненость) по второму аргументу:
+                    $$
+                    \begin{align}
+                    &\langle{x, ay+bz}\rangle=\sum_{i=1}^mx_i\overline{(ay_i+bz_i)}=\\
+                    &=\sum_{i=1}^mx_i(\overline{ay_i}+\overline{bz_i})=\\
+                    &=\overline{a}\sum_{i=1}^mx_i\overline{y_i}+\overline{b}\sum_{i=1}^mx_i\overline{z_i}=\\
+                    &=\overline{a}\langle{x,y}\rangle+\overline{b}\langle{x,z}\rangle.
+                    \end{align}$$
                 </section>
 
                 <!-- END CONTAINER -->
