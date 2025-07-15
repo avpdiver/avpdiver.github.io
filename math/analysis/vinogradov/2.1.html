@@ -17,12 +17,11 @@
 </head>
 
 <body>
-    <h3 class="text-center">2.1. Предел последовательности</h3>
-
     <div class="container" style="text-align: justify;">
         <div class="row">
             <div class="col-md-8">
                 <!-- BEGIN CONTAINER -->
+                <h3 class="text-center">2.1. Предел последовательности</h3>
 
                 <br>
 
@@ -544,9 +543,12 @@
                         $$
                         \begin{align}
                         &\langle{x+\lambda{y},x+\lambda{y}}\rangle=\langle{x,x}\rangle+\overline{\lambda}\langle{x,y}\rangle+\lambda\langle{y,x}\rangle+|\lambda|^2\langle{y,y}\rangle=\\
-                        &=\langle{x,x}\rangle-
+                        &=\langle{x,x}\rangle-\frac{|\langle{x,y}\rangle|^2}{\langle{y,y}\rangle}-\frac{|\langle{x,y}\rangle|^2}{\langle{y,y}\rangle}+\frac{|\langle{x,y}\rangle|^2}{\langle{y,y}\rangle}=\\
+                        &=\langle{x,x}\rangle-\frac{|\langle{x,y}\rangle|^2}{\langle{y,y}\rangle}.\\
                         \end{align}
                         $$
+                        Таким образом,
+                        $$\langle{x,x}\rangle\langle{y,y}\rangle-|\langle{x,y}\rangle|^2=\langle{x+\lambda{y},x+\lambda{y}}\rangle\langle{y,y}\rangle\geq0.$$
                     </p>
                 </section>
                 <!-- END CONTAINER -->
